@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "4a53a24b99c8c59a",
+    "type": "split",
+    "children": [
+      {
+        "id": "c66f6381b9ce8c91",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24ca2006899b94c1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "fb57f3e5e4e1ff4a",
+    "type": "split",
+    "children": [
+      {
+        "id": "eb049ae4d6547418",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9161a20717b64e5f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c761e56c7e6d9c22",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "03cecc4c26d28027",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b17fba29be33317b",
+    "type": "split",
+    "children": [
+      {
+        "id": "057f4f4ba3cd4248",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1176649e5c2e8399",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "7692fc10714d6e87",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "4e3e7e74feddacbf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a2e597a6ca803bb8",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "2f4472e17d6882cc",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "9161a20717b64e5f",
+  "lastOpenFiles": [
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira/Fox/It_is_super_good_but_i_need_it_to_be_clear_it_kind_delpmaspu.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira/Fox/It_is_perfect_now_i_need_you_to_create_360_poses_o_delpmaspu (1).png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira/Fox/It_is_perfect_now_i_need_you_to_create_360_poses_o_delpmaspu.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira/Fox/grok-image-d5d8a33e-576c-4d81-9939-f3269d489b65.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Zebra/Character_Zebra_Reference.jpeg",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Zebra/Character_Zebra_CoreFourViews.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Zebra/Character_Zebra_ActionTurnarounds.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Rabbit/Rabbit_Running_Pose.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Rabbit/Character_BunnyAgent_WavingPose.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Rabbit/Character_BunnyAgent_StandingPose_Front.png",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Rabbit/Character_BunnyAgent_RunningPose_CloseUp.jpeg",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira/Fox",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Zebra",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Rabbit",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Owl",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Monkey",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Crow",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Extra/Cheetah",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Singhuu Environment/later",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thambi",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Main Files/Animals Sheets/Thanthira",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Storyboarding/epi4/storyboard_prompts_10x9.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Storyboarding/epi4/storyboard_prompts_10x9 - Copy.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Storyboarding/epi4/storyboard_prompts_10x9 - Copy (2).md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Storyboarding/epi4/storyboard_grid_3x3.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/Storyboarding/epi4/Episode4 Segments & Breakdowns_ Singu's Forest Rescue.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/README.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/SinghuuAIAnimatedSeries/character_breakdowns_and_summaries.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/README.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/Pitch.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/Mechanics.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/LevelDesign.md",
+    "Client/MadrasDeckEnterainment/NamaThala-Singhuu/GDD.md"
+  ]
+}
