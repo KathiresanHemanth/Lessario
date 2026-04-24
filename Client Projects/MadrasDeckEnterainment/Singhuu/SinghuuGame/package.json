@@ -1,0 +1,26 @@
+{
+  "name": "singhuugame",
+  "version": "1.0.0",
+  "description": "> **Based on the AI-animated series *Nama Thala Singhuu* airing on Sun Network's Chutti TV, Tamil Nadu.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KathiresanHemanth/NamaThala-Singhuu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KathiresanHemanth/NamaThala-Singhuu/issues"
+  },
+  "homepage": "https://github.com/KathiresanHemanth/NamaThala-Singhuu#readme",
+  "dependencies": {
+    "@capacitor/android": "^8.3.1",
+    "@capacitor/cli": "^8.3.1",
+    "@capacitor/core": "^8.3.1"
+  }
+}

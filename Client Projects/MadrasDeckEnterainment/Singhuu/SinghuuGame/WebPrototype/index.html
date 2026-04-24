@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Singhuu: Ekam Run</title>
+    <meta name="description" content="Singhuu: Ekam Run — The game where knowledge is literally your weapon. An endless runner for kids based on Chutti TV's Nama Thala Singhuu.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Three.js Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- HUD -->
+        <div id="hud" class="hidden">
+            <div id="hud-top">
+                <div id="hud-distance"><span id="distIcon">📏</span> <span id="distanceCount">0</span>m</div>
+                <div id="hud-coins"><span>🪙</span> <span id="coinCount">0</span></div>
+                <div id="hud-lives"></div>
+            </div>
+            <div id="hud-power" class="power-inactive">No Power</div>
+            <div id="hud-multiplier" class="hidden">x1</div>
+            <div id="hud-combo" class="hidden"></div>
+            <div id="hud-magnet" class="hidden">🧲 MAGNET</div>
+            <div id="near-miss-popup" class="hidden">🔥 NEAR MISS!</div>
+            <div id="hud-swap">
+                <button class="swap-btn" data-char="singu" id="swap-singu">🦁</button>
+                <button class="swap-btn" data-char="thanthiraa" id="swap-thanthiraa">🦊</button>
+                <button class="swap-btn" data-char="meenukutti" id="swap-meenukutti">🐦</button>
+                <button class="swap-btn" data-char="kongini" id="swap-kongini">🦍</button>
+                <button class="swap-btn" data-char="muttagose" id="swap-muttagose">🐇</button>
+                <button class="swap-btn" data-char="suttapazham" id="swap-suttapazham">🐪</button>
+            </div>
+            <div id="hud-actions">
+                <button id="slide-btn">⬇️ SLIDE</button>
+                <button id="jump-btn">⬆️ JUMP</button>
+            </div>
+            <button id="pause-btn">⏸️</button>
+        </div>
+
+        <!-- Intro Screen -->
+        <div id="intro-overlay">
+            <div class="intro-content">
+                <div class="logo-container">
+                    <h1 class="game-logo">SINGHUU</h1>
+                    <h2 class="game-subtitle">EKAM RUN</h2>
+                    <p class="game-tagline">Knowledge is Your Weapon</p>
+                </div>
+                <div id="char-select">
+                    <p class="select-label">Your Council</p>
+                    <div class="char-grid">
+                        <div class="char-card selected" data-char="singu">
+                            <div class="char-icon">🦁</div>
+                            <div class="char-name">Singu</div>
+                            <div class="char-power">💪 Roar</div>
+                        </div>
+                        <div class="char-card selected" data-char="thanthiraa">
+                            <div class="char-icon">🦊</div>
+                            <div class="char-name">Thanthiraa</div>
+                            <div class="char-power">⚡ Dash</div>
+                        </div>
+                        <div class="char-card selected" data-char="meenukutti">
+                            <div class="char-icon">🐦</div>
+                            <div class="char-name">Meenukutti</div>
+                            <div class="char-power">🕊️ Glide</div>
+                        </div>
+                        <div class="char-card selected" data-char="kongini">
+                            <div class="char-icon">🦍</div>
+                            <div class="char-name">Kongini</div>
+                            <div class="char-power">🧠 Genius</div>
+                        </div>
+                        <div class="char-card selected" data-char="muttagose">
+                            <div class="char-icon">🐇</div>
+                            <div class="char-name">Muttagose</div>
+                            <div class="char-power">🏃 Swift</div>
+                        </div>
+                        <div class="char-card selected" data-char="suttapazham">
+                            <div class="char-icon">🐪</div>
+                            <div class="char-name">Suttapazham</div>
+                            <div class="char-power">🐪 Trek</div>
+                        </div>
+                    </div>
+                </div>
+                <button id="play-btn" class="big-btn">▶ START RUN</button>
+                <p class="credits">Based on Chutti TV's <em>Nama Thala Singhuu</em></p>
+            </div>
+        </div>
+
+        <!-- Bullet-Time Question Overlay -->
+        <div id="question-overlay" class="hidden">
+            <div class="bt-vignette"></div>
+            <div class="question-box">
+                <div class="q-header">
+                    <span class="q-label">⚡ EKAM QUESTION</span>
+                    <div class="timer-bar"><div id="timer-fill"></div></div>
+                </div>
+                <h2 id="question-text"></h2>
+                <p id="obstacle-hint" class="obstacle-hint"></p>
+                <div class="answers-grid" id="answers-grid"></div>
+            </div>
+        </div>
+
+        <!-- Fact Popup (after answering) -->
+        <div id="fact-popup" class="hidden">
+            <div class="fact-box">
+                <div id="fact-result-icon"></div>
+                <p id="fact-text"></p>
+            </div>
+        </div>
+
+        <!-- Pause Overlay -->
+        <div id="pause-overlay" class="hidden">
+            <div class="pause-box">
+                <h2>⏸️ PAUSED</h2>
+                <button id="resume-btn" class="big-btn">▶ RESUME</button>
+                <button id="quit-btn" class="secondary-btn">🚪 QUIT RUN</button>
+            </div>
+        </div>
+
+        <!-- Revive Overlay -->
+        <div id="revive-overlay" class="hidden">
+            <div class="revive-box">
+                <h2>💀 FALLEN!</h2>
+                <p class="revive-sub">Use coins to continue your run!</p>
+                <div class="revive-cost"><span>🪙</span> <span id="revive-price">50</span></div>
+                <button id="revive-btn" class="big-btn revive-btn-style">🔄 REVIVE</button>
+                <button id="revive-skip-btn" class="secondary-btn">☠️ GIVE UP</button>
+                <div class="revive-timer-bar"><div id="revive-timer-fill"></div></div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-overlay" class="hidden">
+            <div class="gameover-box">
+                <h1 id="go-title">🦁 SINGHUU IS PROUD!</h1>
+                <div id="go-new-best" class="hidden">🏆 NEW BEST!</div>
+                <div class="recap-grid">
+                    <div class="recap-item"><span class="recap-label">📏 Distance</span><span class="recap-val" id="go-distance">0m</span></div>
+                    <div class="recap-item"><span class="recap-label">🪙 Coins</span><span class="recap-val" id="go-coins">0</span></div>
+                    <div class="recap-item"><span class="recap-label">🧠 Correct</span><span class="recap-val" id="go-correct">0/0</span></div>
+                    <div class="recap-item"><span class="recap-label">⭐ Best</span><span class="recap-val" id="go-best">0m</span></div>
+                    <div class="recap-item"><span class="recap-label">🔥 Best Combo</span><span class="recap-val" id="go-combo">0</span></div>
+                    <div class="recap-item"><span class="recap-label">💨 Near Misses</span><span class="recap-val" id="go-nearmiss">0</span></div>
+                </div>
+                <div id="go-learned">
+                    <h3>📚 You Learned:</h3>
+                    <ul id="learned-list"></ul>
+                </div>
+                <button id="retry-btn" class="big-btn">🔄 RUN AGAIN</button>
+                <button id="menu-btn" class="secondary-btn">🏠 MAIN MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="game.js"></script>
+</body>
+</html>

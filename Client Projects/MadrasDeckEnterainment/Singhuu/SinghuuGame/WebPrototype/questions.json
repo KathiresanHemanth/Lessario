@@ -1,0 +1,228 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "text": "What does Singu the lion eat?",
+      "difficulty": "easy",
+      "category": "Animal Diet",
+      "obstacle": "boulder",
+      "answers": [
+        { "text": "🥩 Meat", "type": "meat", "correct": true },
+        { "text": "🐟 Fish", "type": "fish", "correct": false },
+        { "text": "🌿 Grass", "type": "grass", "correct": false },
+        { "text": "🍎 Fruits", "type": "fruit", "correct": false }
+      ],
+      "fact": "Lions are carnivores — they hunt and eat other animals for protein and strength."
+    },
+    {
+      "id": 2,
+      "text": "How does a kingfisher catch its food?",
+      "difficulty": "easy",
+      "category": "Animal Behavior",
+      "obstacle": "river",
+      "answers": [
+        { "text": "🕊️ Diving into water", "type": "glide", "correct": true },
+        { "text": "🥩 Hunting on land", "type": "meat", "correct": false },
+        { "text": "🌿 Eating plants", "type": "grass", "correct": false },
+        { "text": "🍎 Picking fruit", "type": "fruit", "correct": false }
+      ],
+      "fact": "Kingfishers dive into rivers at 45 km/h to catch fish — their sharp beak cuts through water like a blade."
+    },
+    {
+      "id": 3,
+      "text": "Which animal uses echolocation to navigate?",
+      "difficulty": "medium",
+      "category": "Animal Adaptation",
+      "obstacle": "dark",
+      "answers": [
+        { "text": "🦇 Bat", "type": "stealth", "correct": true },
+        { "text": "🦁 Lion", "type": "meat", "correct": false },
+        { "text": "🐦 Kingfisher", "type": "glide", "correct": false },
+        { "text": "🐍 Snake", "type": "grass", "correct": false }
+      ],
+      "fact": "Bats emit high-frequency sounds that bounce back, allowing them to see in total darkness."
+    },
+    {
+      "id": 4,
+      "text": "What gives a cheetah its incredible speed?",
+      "difficulty": "easy",
+      "category": "Animal Adaptation",
+      "obstacle": "stampede",
+      "answers": [
+        { "text": "⚡ Lean muscles", "type": "fish", "correct": true },
+        { "text": "💪 Heavy body", "type": "meat", "correct": false },
+        { "text": "🌿 Plant diet", "type": "grass", "correct": false },
+        { "text": "🕊️ Wings", "type": "glide", "correct": false }
+      ],
+      "fact": "Cheetahs are the fastest land animals at 112 km/h thanks to their lightweight, flexible spine."
+    },
+    {
+      "id": 5,
+      "text": "What is the Nilgiri Tahr?",
+      "difficulty": "medium",
+      "category": "Tamil Wildlife",
+      "obstacle": "cliff",
+      "answers": [
+        { "text": "🐐 Mountain goat", "type": "glide", "correct": true },
+        { "text": "🐍 Forest snake", "type": "stealth", "correct": false },
+        { "text": "🦁 Type of lion", "type": "meat", "correct": false },
+        { "text": "🐟 River fish", "type": "fish", "correct": false }
+      ],
+      "fact": "The Nilgiri Tahr is an endangered mountain goat found only in the Western Ghats of Tamil Nadu."
+    },
+    {
+      "id": 6,
+      "text": "How do camels survive sandstorms?",
+      "difficulty": "medium",
+      "category": "Animal Adaptation",
+      "obstacle": "duststorm",
+      "answers": [
+        { "text": "🐢 Closing eyelids", "type": "grass", "correct": true },
+        { "text": "⚡ Running away", "type": "fish", "correct": false },
+        { "text": "💪 Fighting", "type": "meat", "correct": false },
+        { "text": "🕊️ Flying above", "type": "glide", "correct": false }
+      ],
+      "fact": "Camels have three eyelids and can seal their nostrils shut during sandstorms."
+    },
+    {
+      "id": 7,
+      "text": "Which bird soars the highest in India?",
+      "difficulty": "hard",
+      "category": "Tamil Wildlife",
+      "obstacle": "cliff",
+      "answers": [
+        { "text": "🦅 Himalayan Vulture", "type": "glide", "correct": true },
+        { "text": "🐦 Kingfisher", "type": "fish", "correct": false },
+        { "text": "🦜 Parrot", "type": "fruit", "correct": false },
+        { "text": "🐧 Penguin", "type": "grass", "correct": false }
+      ],
+      "fact": "The Himalayan Vulture soars at over 9,000 meters — higher than most airplanes!"
+    },
+    {
+      "id": 8,
+      "text": "What does a fox use to find prey buried in snow?",
+      "difficulty": "medium",
+      "category": "Animal Behavior",
+      "obstacle": "boulder",
+      "answers": [
+        { "text": "👂 Sharp hearing", "type": "stealth", "correct": true },
+        { "text": "👁️ Night vision", "type": "fish", "correct": false },
+        { "text": "💪 Digging power", "type": "meat", "correct": false },
+        { "text": "🌿 Sense of smell", "type": "grass", "correct": false }
+      ],
+      "fact": "Foxes can hear small animals moving under deep snow and pounce with precision."
+    },
+    {
+      "id": 9,
+      "text": "Why do elephants live in herds?",
+      "difficulty": "easy",
+      "category": "Animal Behavior",
+      "obstacle": "stampede",
+      "answers": [
+        { "text": "🛡️ Protection", "type": "meat", "correct": true },
+        { "text": "⚡ Speed", "type": "fish", "correct": false },
+        { "text": "🕊️ Flying lessons", "type": "glide", "correct": false },
+        { "text": "🌿 Farming", "type": "grass", "correct": false }
+      ],
+      "fact": "Elephant herds are led by the oldest female and protect calves from predators."
+    },
+    {
+      "id": 10,
+      "text": "What makes a snake move silently?",
+      "difficulty": "easy",
+      "category": "Animal Adaptation",
+      "obstacle": "thorns",
+      "answers": [
+        { "text": "🌑 Scales on belly", "type": "stealth", "correct": true },
+        { "text": "⚡ Small wings", "type": "glide", "correct": false },
+        { "text": "💪 Strong legs", "type": "meat", "correct": false },
+        { "text": "🐟 Fins", "type": "fish", "correct": false }
+      ],
+      "fact": "Snakes use special belly scales called scutes to grip the ground and glide silently."
+    },
+    {
+      "id": 11,
+      "text": "Which forest is home to Singhuu's adventures?",
+      "difficulty": "easy",
+      "category": "Singhuu Episodes",
+      "obstacle": "boulder",
+      "answers": [
+        { "text": "🌳 Western Ghats", "type": "meat", "correct": true },
+        { "text": "🏔️ Himalayas", "type": "glide", "correct": false },
+        { "text": "🏜️ Thar Desert", "type": "grass", "correct": false },
+        { "text": "🌊 Andaman Islands", "type": "fish", "correct": false }
+      ],
+      "fact": "The Western Ghats in Tamil Nadu is one of the world's biodiversity hotspots."
+    },
+    {
+      "id": 12,
+      "text": "What is deforestation?",
+      "difficulty": "medium",
+      "category": "Conservation",
+      "obstacle": "fire",
+      "answers": [
+        { "text": "🪓 Cutting trees", "type": "meat", "correct": true },
+        { "text": "🌊 Flooding", "type": "fish", "correct": false },
+        { "text": "🌙 Nighttime", "type": "stealth", "correct": false },
+        { "text": "🍎 Harvesting fruit", "type": "fruit", "correct": false }
+      ],
+      "fact": "Deforestation destroys animal habitats and contributes to climate change."
+    },
+    {
+      "id": 13,
+      "text": "Who is the wisest member of the Animal Council?",
+      "difficulty": "hard",
+      "category": "Singhuu Episodes",
+      "obstacle": "dark",
+      "answers": [
+        { "text": "🦍 Kongini the Gorilla", "type": "stealth", "correct": true },
+        { "text": "🦁 Singhuu the Lion", "type": "meat", "correct": false },
+        { "text": "🦊 Thanthiraa the Fox", "type": "fish", "correct": false },
+        { "text": "🐫 Suttapazham", "type": "grass", "correct": false }
+      ],
+      "fact": "Kongini uses knowledge and patience rather than strength to solve problems."
+    },
+    {
+      "id": 14,
+      "text": "What special herb did Singhuu search for in Episode 2?",
+      "difficulty": "hard",
+      "category": "Singhuu Episodes",
+      "obstacle": "cliff",
+      "answers": [
+        { "text": "🌿 Healing Herb", "type": "fruit", "correct": true },
+        { "text": "🔥 Fire Flower", "type": "meat", "correct": false },
+        { "text": "💎 Crystal Root", "type": "stealth", "correct": false },
+        { "text": "🐟 Water Weed", "type": "fish", "correct": false }
+      ],
+      "fact": "In 'Herb for the Herd', Singhuu climbed dangerous mountains to find a rare medicine."
+    },
+    {
+      "id": 15,
+      "text": "How many legs does a spider have?",
+      "difficulty": "easy",
+      "category": "Animal Diet",
+      "obstacle": "thorns",
+      "answers": [
+        { "text": "🕷️ Eight", "type": "stealth", "correct": true },
+        { "text": "🐜 Six", "type": "fish", "correct": false },
+        { "text": "🐙 Ten", "type": "grass", "correct": false },
+        { "text": "🦀 Twelve", "type": "meat", "correct": false }
+      ],
+      "fact": "Spiders are arachnids, not insects — they always have eight legs."
+    },
+    {
+      "id": 16,
+      "text": "What fruit do Indian flying foxes love?",
+      "difficulty": "medium",
+      "category": "Tamil Wildlife",
+      "obstacle": "river",
+      "answers": [
+        { "text": "🥭 Mangoes", "type": "fruit", "correct": true },
+        { "text": "🥩 Meat", "type": "meat", "correct": false },
+        { "text": "🐟 Fish", "type": "fish", "correct": false },
+        { "text": "🌿 Grass", "type": "grass", "correct": false }
+      ],
+      "fact": "Indian flying foxes are fruit bats — they spread mango seeds across the forest!"
+    }
+  ]
+}

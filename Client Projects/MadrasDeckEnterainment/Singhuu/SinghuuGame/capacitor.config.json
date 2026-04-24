@@ -1,0 +1,19 @@
+{
+  "appId": "com.lessario.singhuu",
+  "appName": "Singhuu Ekam Run",
+  "webDir": "WebPrototype",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#0D2B0A",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP"
+    }
+  },
+  "cordova": {},
+  "server": {
+    "androidScheme": "https"
+  }
+}
