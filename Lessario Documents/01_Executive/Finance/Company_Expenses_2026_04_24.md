@@ -8,8 +8,8 @@
 | **Opening Balance** (Client Payment) | 35,000 |
 | **Less: Previous Expenditures** | -10,000 |
 | **Starting Balance Today** | **25,000** |
-| **Total Today's Expenses (Net)** | -19,580 |
-| **Final Closing Balance** | **5,420** |
+| **Total Today's Expenses (Net)** | -20,084 |
+| **Final Closing Balance** | **4,916** |
 
 ---
 
@@ -26,7 +26,8 @@
 | 2026-04-24 | Electricity Bill | Fixed/Utilities | Debit | 500 | 11,222 |
 | 2026-04-24 | Loan Repay (Monthly EMI) | Fixed/Loan | Debit | 6,680 | 4,542 |
 | 2026-04-24 | Transfer from Savings | Capital/Savings | Credit | 878 | 5,420 |
-| **TOTALS** | | | | **20,458 (Net: 19,580)** | **5,420** |
+| 2026-04-24 | Meshy.ai Subscription | Operations/Tools | Debit | 504 | 4,916 |
+| **TOTALS** | | | | **20,962 (Net: 20,084)** | **4,916** |
 
 ---
 
@@ -38,14 +39,14 @@
 | **Total Fixed Projections** | **1,500** | |
 
 #### 📊 Survival Forecast
-- **Current Liquid Balance:** 5,420
+- **Current Liquid Balance:** 4,916
 - **Less Fixed Projections:** -1,500
-- **Remaining for Food:** **3,920**
+- **Remaining for Food:** **3,416**
 
 #### 🍔 Food Expense Prediction (30 Days)
 *Based on today's spending (~1,000/day), you would need 30,000 for food.*
-*To survive on the remaining **3,920**, your daily budget must be capped at:*
-> **~130 INR per day**
+*To survive on the remaining **3,416**, your daily budget must be capped at:*
+> **~114 INR per day**
 
 ---
 ### 4. Strategic Finance Remarks
