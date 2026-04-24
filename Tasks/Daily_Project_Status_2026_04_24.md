@@ -4,7 +4,7 @@
 1. **AR Photo App**
    - Goal: Take photos with Singhu.
    - Status: In progress.
-
+ 
 2. **AR Robot Filter App**
    - Goal: Replace camera video with a robot (facial and body motion).
    - Status: In progress.
