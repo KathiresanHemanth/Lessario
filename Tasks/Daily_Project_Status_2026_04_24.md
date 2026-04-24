@@ -16,12 +16,18 @@
 ---
 
 ## Repository Structure
-- **Main Branch**: Production-ready code.
+- **Main Branch**: Production-ready code. (Updated with core documents and LessarioEngine)
 - **Develop Branch**: Integration branch for features.
 - **Feature Branches**:
   - `ar-singhu-selfie-app`: AR Photo App development.
   - `ar-robot-filter-app-chitra`: AR Robot Filter App development.
   - `singhuu-game`: Singhuu Game updates.
+
+## Current Updates (April 24)
+- **Core Documents**: Staged and committed `Founder_TODO.md`, `Lessario Documents/`, and `Notes/`.
+- **Engine**: Committed `LessarioEngine/` source and configuration.
+- **Git Hygiene**: Added a `.gitignore` to exclude build artifacts and environment-specific files.
+- **Issue Noted**: Some folders in `Client Projects/` contain nested `.git` repositories (e.g., ZorbaGames), which are blocking a full commit. These need to be converted to regular folders or added as submodules.
 
 ---
 *Created by Antigravity*
