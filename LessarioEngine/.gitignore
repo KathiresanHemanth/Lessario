@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+out/
+build/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.suo
+*.db
+*.opendb
+
+# CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE & Exports
+.vscode/
+export/
+export_log.txt

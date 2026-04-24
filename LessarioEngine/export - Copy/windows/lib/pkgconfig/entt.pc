@@ -1,0 +1,8 @@
+prefix=C:/Users/khkum/Documents/Lessario/LessarioEngine/export/windows
+includedir=${prefix}/include
+
+Name: EnTT
+Description: Gaming meets modern C++
+Url: https://github.com/skypjack/entt
+Version: 3.13.1
+Cflags: -I${includedir}
