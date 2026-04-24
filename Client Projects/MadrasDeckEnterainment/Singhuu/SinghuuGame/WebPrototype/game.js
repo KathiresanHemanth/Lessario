@@ -75,7 +75,7 @@ composer.addPass(renderPass);
 
 const bloomPass = new UnrealBloomPass(new THREE.Vector2(container.clientWidth, container.clientHeight), 1.5, 0.4, 0.85);
 bloomPass.threshold = 0.9;
-bloomPass.strength = 0.5; 
+bloomPass.strength = 0.5;
 bloomPass.radius = 0.4;
 composer.addPass(bloomPass);
 
@@ -124,23 +124,23 @@ function generateNoiseTex(baseColorHex, darkColorHex, patternType = 'noise') {
     const cvs = document.createElement('canvas');
     cvs.width = 128; cvs.height = 128;
     const ctx = cvs.getContext('2d');
-    
+
     ctx.fillStyle = baseColorHex;
     ctx.fillRect(0, 0, 128, 128);
-    
+
     ctx.fillStyle = darkColorHex;
     for (let i = 0; i < 1500; i++) {
         const x = Math.random() * 128;
         const y = Math.random() * 128;
         if (patternType === 'grass') {
-            ctx.fillRect(x, y, 2 + Math.random()*2, 6 + Math.random()*6); // vertical blades
+            ctx.fillRect(x, y, 2 + Math.random() * 2, 6 + Math.random() * 6); // vertical blades
         } else if (patternType === 'wood') {
-            ctx.fillRect(x, y, 8 + Math.random()*15, 1.5); // horizontal bark lines
+            ctx.fillRect(x, y, 8 + Math.random() * 15, 1.5); // horizontal bark lines
         } else {
-            ctx.fillRect(x, y, 2 + Math.random()*3, 2 + Math.random()*3); // generic dirt noise
+            ctx.fillRect(x, y, 2 + Math.random() * 3, 2 + Math.random() * 3); // generic dirt noise
         }
     }
-    
+
     const tex = new THREE.CanvasTexture(cvs);
     tex.colorSpace = THREE.SRGBColorSpace;
     tex.wrapS = THREE.RepeatWrapping;
@@ -280,21 +280,21 @@ function createCloud(x, y, z) {
         const puff = new THREE.Mesh(puffGeo, cloudMat);
         puff.position.set(i * 1.5 - 2, Math.random() * 0.5, Math.random() * 1.5);
         const s = 1.5 + Math.random() * 2;
-        puff.scale.set(s, s*0.6, s);
+        puff.scale.set(s, s * 0.6, s);
         group.add(puff);
     }
     group.position.set(x, y, z);
     scene.add(group);
     clouds.push({ mesh: group, speed: 0.01 + Math.random() * 0.02 });
 }
-for (let i=0; i<8; i++) {
-    createCloud((Math.random()-0.5)*150, 30 + Math.random()*20, -Math.random()*200);
+for (let i = 0; i < 8; i++) {
+    createCloud((Math.random() - 0.5) * 150, 30 + Math.random() * 20, -Math.random() * 200);
 }
 
 const groundSegments = [];
 function createGroundSegment(z) {
     const group = new THREE.Group();
-    
+
     texDirt.repeat.set(1, 3);
     const road = new THREE.Mesh(new THREE.PlaneGeometry(LANE_WIDTH * 3 + 2, 60), new THREE.MeshStandardMaterial({ map: texDirt, roughness: 1.0 }));
     road.rotation.x = -Math.PI / 2; road.receiveShadow = true; group.add(road);
@@ -303,7 +303,7 @@ function createGroundSegment(z) {
     const grassMatCustom = new THREE.MeshStandardMaterial({ map: texGrass, roughness: 0.9 });
     const grassL = new THREE.Mesh(new THREE.PlaneGeometry(30, 60), grassMatCustom);
     grassL.rotation.x = -Math.PI / 2; grassL.position.set(-LANE_WIDTH * 1.5 - 16, 0.05, 0); grassL.receiveShadow = true; group.add(grassL);
-    
+
     const grassR = new THREE.Mesh(new THREE.PlaneGeometry(30, 60), grassMatCustom);
     grassR.rotation.x = -Math.PI / 2; grassR.position.set(LANE_WIDTH * 1.5 + 16, 0.05, 0); grassR.receiveShadow = true; group.add(grassR);
 
@@ -317,7 +317,7 @@ function createTree(x, z) {
     const group = new THREE.Group();
     const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.4, 2.5, 6), new THREE.MeshStandardMaterial({ map: texWood, roughness: 0.9 }));
     trunk.position.y = 1.25; trunk.castShadow = true; group.add(trunk);
-    
+
     const leafMat = new THREE.MeshStandardMaterial({ map: texGrass, flatShading: true });
     for (let i = 0; i < 3; i++) {
         const leaf = new THREE.Mesh(new THREE.ConeGeometry(2.5 - i * 0.5, 2.5, 6), leafMat);
@@ -341,13 +341,13 @@ populateTrees();
 const birdMat = new THREE.MeshBasicMaterial({ color: 0x222222 });
 function spawnBird() {
     const bird = new THREE.Group();
-    const body = new THREE.Mesh(new THREE.ConeGeometry(0.1, 0.4, 4), birdMat); body.rotation.x = Math.PI/2; bird.add(body);
+    const body = new THREE.Mesh(new THREE.ConeGeometry(0.1, 0.4, 4), birdMat); body.rotation.x = Math.PI / 2; bird.add(body);
     const wingL = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.2), birdMat); wingL.position.set(-0.3, 0, 0); bird.add(wingL);
     const wingR = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.2), birdMat); wingR.position.set(0.3, 0, 0); bird.add(wingR);
-    bird.position.set((Math.random()-0.5)*40, 8 + Math.random()*8, -100 - Math.random()*50); scene.add(bird);
-    birds.push({ mesh: bird, wingL, wingR, speed: 0.1 + Math.random() * 0.1, flapRate: 15 + Math.random()*10 });
+    bird.position.set((Math.random() - 0.5) * 40, 8 + Math.random() * 8, -100 - Math.random() * 50); scene.add(bird);
+    birds.push({ mesh: bird, wingL, wingR, speed: 0.1 + Math.random() * 0.1, flapRate: 15 + Math.random() * 10 });
 }
-for(let i=0; i<5; i++) spawnBird();
+for (let i = 0; i < 5; i++) spawnBird();
 
 // ─── Speed Lines VFX System ───
 const speedLineMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.15 });
@@ -382,7 +382,7 @@ function prepareModel(gltf, charKey, scale) {
     const model = gltf.scene;
     // Auto-center or adjust scale
     model.scale.set(scale, scale, scale);
-    if(charKey === 'singu') {
+    if (charKey === 'singu') {
         model.rotation.y = Math.PI / 2; // Horse is turned sideways in three.js example
     }
     model.traverse((child) => {
@@ -416,7 +416,7 @@ function buildPlayerMesh(charKey) {
         // Use the downloaded 3D Model!
         const model = externalModels[charKey].scene;
         playerGroup.add(model);
-        
+
         // Setup Animation
         foxMixer = new THREE.AnimationMixer(model);
         const animClip = externalModels[charKey].animations[0];
@@ -424,16 +424,16 @@ function buildPlayerMesh(charKey) {
             const action = foxMixer.clipAction(animClip);
             action.play();
         }
-        
+
         // Mock body geometry to prevent errors on power transformations
-        playerBody = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.1, 0.1)); 
+        playerBody = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.1, 0.1));
         playerHead = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.1, 0.1));
         baseBodyMaterials = [new THREE.MeshBasicMaterial()];
         playerBody.material = baseBodyMaterials;
         playerBody.visible = false;
         playerHead.visible = false;
         playerGroup.add(playerBody, playerHead);
-        
+
     } else {
         // Fallback to procedural primitives
         const bodyMat = new THREE.MeshStandardMaterial({ color: charDef.color, roughness: 0.6 });
@@ -450,7 +450,7 @@ function buildPlayerMesh(charKey) {
             playerMane.position.y = 1.6; playerGroup.add(playerMane);
         }
     }
-    
+
     playerGroup.scale.set(1, 1, 1);
     isSuperForm = false;
     playerGroup.position.set(0, PLAYER_GROUND_Y, 0);
@@ -462,18 +462,18 @@ buildPlayerMesh('singu');
 // ─── VFX ───
 let auraRing = null;
 function createAura(color) {
-    if(auraRing) playerGroup.remove(auraRing);
+    if (auraRing) playerGroup.remove(auraRing);
     auraRing = new THREE.Mesh(new THREE.RingGeometry(0.8, 1.2, 16), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.5, side: THREE.DoubleSide }));
     auraRing.rotation.x = -Math.PI / 2; auraRing.position.y = 0.1; playerGroup.add(auraRing);
 }
 function removeAura() {
-    if(auraRing) { playerGroup.remove(auraRing); auraRing = null; }
+    if (auraRing) { playerGroup.remove(auraRing); auraRing = null; }
 }
 function spawnParticle(pos, color, count = 8) {
     for (let i = 0; i < count; i++) {
         const mesh = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.15, 0.15), new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.4, transparent: true }));
         mesh.position.copy(pos); scene.add(mesh);
-        particles.push({ mesh, vel: new THREE.Vector3((Math.random() - 0.5)*0.3, Math.random()*0.35, (Math.random() - 0.5)*0.3), life: 50 + Math.random() * 20, rotSpeed: Math.random() * 0.15 });
+        particles.push({ mesh, vel: new THREE.Vector3((Math.random() - 0.5) * 0.3, Math.random() * 0.35, (Math.random() - 0.5) * 0.3), life: 50 + Math.random() * 20, rotSpeed: Math.random() * 0.15 });
     }
 }
 
@@ -481,14 +481,14 @@ function spawnParticle(pos, color, count = 8) {
 function createObstacle(lane, type) {
     const group = new THREE.Group();
     let hitboxH = 1.4;
-    
+
     if (type === 'boulder') {
         const boulder = new THREE.Mesh(new THREE.SphereGeometry(0.9, 8, 8), new THREE.MeshStandardMaterial({ map: texRock }));
         boulder.position.y = 0.9; boulder.castShadow = true; group.add(boulder);
     } else if (type === 'log') {
         const log = new THREE.Mesh(new THREE.CylinderGeometry(0.35, 0.35, 3.2, 8), new THREE.MeshStandardMaterial({ map: texWood }));
         log.rotation.z = Math.PI / 2; log.position.y = 0.35; log.castShadow = true; group.add(log);
-        hitboxH = 0.7; 
+        hitboxH = 0.7;
     } else if (type === 'barrier') {
         // NEW: High barrier — must SLIDE under!
         const bar = new THREE.Mesh(
@@ -567,7 +567,7 @@ function spawnWorld() {
         const lane = Math.floor(Math.random() * 3);
         createObstacle(lane, type);
         lastObstacleZ = distance * 10;
-        
+
         // Progressive dual-obstacle spawning
         if (distance > 500 && Math.random() > 0.7) {
             let lane2 = (lane + 1 + Math.floor(Math.random() * 2)) % 3;
@@ -600,7 +600,7 @@ function addCombo(reason) {
     comboCount++;
     comboTimer = 120; // 2 seconds to chain
     if (comboCount > bestCombo) bestCombo = comboCount;
-    
+
     // Update multiplier based on combo
     if (comboCount >= 20) scoreMultiplier = 4;
     else if (comboCount >= 10) scoreMultiplier = 3;
@@ -610,7 +610,7 @@ function addCombo(reason) {
     sfxCombo();
     hudCombo.textContent = `🔥 ${comboCount} COMBO`;
     hudCombo.classList.remove('hidden');
-    
+
     if (scoreMultiplier > 1) {
         hudMultiplier.textContent = `x${scoreMultiplier}`;
         hudMultiplier.classList.remove('hidden');
@@ -630,17 +630,17 @@ function showNearMiss() {
     nearMissTimer = 40;
     addCombo('near_miss');
     sfxNearMiss();
-    
+
     // Show popup (re-trigger animation)
     nearMissPopup.classList.remove('hidden');
     nearMissPopup.style.animation = 'none';
     nearMissPopup.offsetHeight; // trigger reflow
     nearMissPopup.style.animation = null;
-    
+
     // Award bonus coins
     coins += 2 * scoreMultiplier;
     coinCountEl.textContent = coins;
-    
+
     // Bonus particles
     spawnParticle(playerGroup.position.clone(), 0xFFD700, 6);
 }
@@ -651,7 +651,7 @@ async function loadQuestions() {
         const resp = await fetch('questions.json');
         const data = await resp.json();
         questionBank = data.questions;
-    } catch (e) {}
+    } catch (e) { }
 }
 
 function getNextQuestion() {
@@ -667,7 +667,7 @@ function triggerBulletTime() {
     gameState = 'BULLET_TIME';
     sfxBulletTime();
 
-    if(!questionBank.length) return;
+    if (!questionBank.length) return;
     currentQuestion = getNextQuestion();
     usedQuestionIds.add(currentQuestion.id);
     questionsAsked++;
@@ -685,7 +685,7 @@ function triggerBulletTime() {
     questionOverlay.classList.remove('hidden');
     timerFill.style.transition = 'none'; timerFill.style.width = '100%';
     requestAnimationFrame(() => { timerFill.style.transition = 'width 10s linear'; timerFill.style.width = '0%'; });
-    
+
     clearTimeout(questionTimerHandle);
     questionTimerHandle = setTimeout(() => { if (gameState === 'BULLET_TIME') handleAnswer(null, null); }, 10500);
 }
@@ -722,12 +722,12 @@ function activatePower(type, wasCorrect) {
         const newMats = [...baseBodyMaterials];
         newMats[4] = frontMat; // Z-Positive is front face in Three.js Box
         playerBody.material = newMats;
-        
+
         // Scale him up
         playerGroup.scale.set(1.4, 1.4, 1.4);
         playerHead.visible = false; // Hide primitive head to favor texture
-        if(playerMane) playerMane.visible = false;
-        
+        if (playerMane) playerMane.visible = false;
+
         sfxSuper();
         hudPower.textContent = '🔥 SUPER SINGHUU ACTIVE! 🔥';
         createAura(0xFFD700);
@@ -806,7 +806,7 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'd') movePlayerLane(1);
     if (e.key === 'ArrowUp' || e.key === 'w' || e.key === ' ') jumpPlayer();
     if (e.key === 'ArrowDown' || e.key === 's') slidePlayer();
-    if (['1','2','3'].includes(e.key)) swapCharacter(party[parseInt(e.key)-1]);
+    if (['1', '2', '3'].includes(e.key)) swapCharacter(party[parseInt(e.key) - 1]);
 });
 let tsX = 0, tsY = 0;
 container.addEventListener('touchstart', e => { tsX = e.touches[0].clientX; tsY = e.touches[0].clientY; }, { passive: true });
@@ -862,11 +862,11 @@ function triggerRevive() {
     gameState = 'REVIVE_PROMPT';
     hud.classList.add('hidden');
     reviveOverlay.classList.remove('hidden');
-    
+
     const priceEl = document.getElementById('revive-price');
     const cost = REVIVE_COST * (revivesUsed + 1);
     priceEl.textContent = cost;
-    
+
     const reviveBtn = document.getElementById('revive-btn');
     if (coins < cost) {
         reviveBtn.disabled = true;
@@ -875,7 +875,7 @@ function triggerRevive() {
         reviveBtn.disabled = false;
         reviveBtn.style.opacity = '1';
     }
-    
+
     // Timer bar countdown
     const fill = document.getElementById('revive-timer-fill');
     fill.style.transition = 'none';
@@ -884,7 +884,7 @@ function triggerRevive() {
         fill.style.transition = `width ${REVIVE_TIMER_MS / 1000}s linear`;
         fill.style.width = '0%';
     });
-    
+
     clearTimeout(reviveTimerHandle);
     reviveTimerHandle = setTimeout(() => {
         if (gameState === 'REVIVE_PROMPT') {
@@ -898,16 +898,16 @@ function revivePlayer() {
     clearTimeout(reviveTimerHandle);
     const cost = REVIVE_COST * (revivesUsed + 1);
     if (coins < cost) return;
-    
+
     coins -= cost;
     coinCountEl.textContent = coins;
     revivesUsed++;
     lives = 1;
-    
+
     reviveOverlay.classList.add('hidden');
     hud.classList.remove('hidden');
     updateLivesUI();
-    
+
     // Clear nearby obstacles
     for (let i = obstacles.length - 1; i >= 0; i--) {
         if (obstacles[i].mesh.position.z > -20) {
@@ -915,46 +915,46 @@ function revivePlayer() {
             obstacles.splice(i, 1);
         }
     }
-    
+
     sfxRevive();
     spawnParticle(playerGroup.position.clone(), 0x4CAF50, 15);
     createAura(0x4CAF50);
     screenShakeIntensity = 0.2;
-    
+
     // Brief invincibility
     activePower = 'shield';
     powerTimer = 120;
     hudPower.textContent = '🛡️ REVIVE SHIELD';
     hudPower.className = 'power-active';
-    
+
     gameState = 'PLAYING';
 }
 
 function endGame() {
     gameState = 'GAMEOVER'; hud.classList.add('hidden');
-    
+
     // Update best distance
     const isNewBest = Math.floor(distance) > bestDistance;
     if (isNewBest) {
         bestDistance = Math.floor(distance);
         localStorage.setItem('singhuu_best', bestDistance.toString());
     }
-    
+
     document.getElementById('go-distance').textContent = Math.floor(distance) + 'm';
     document.getElementById('go-coins').textContent = coins;
     document.getElementById('go-correct').textContent = `${questionsCorrect}/${questionsAsked}`;
     document.getElementById('go-best').textContent = bestDistance + 'm';
     document.getElementById('go-combo').textContent = bestCombo;
     document.getElementById('go-nearmiss').textContent = nearMissCount;
-    
+
     const newBestEl = document.getElementById('go-new-best');
     if (isNewBest) { newBestEl.classList.remove('hidden'); } else { newBestEl.classList.add('hidden'); }
-    
+
     // Populate learned facts
     const learnedList = document.getElementById('learned-list');
     learnedList.innerHTML = '';
     factsLearned.slice(-5).forEach(f => { const li = document.createElement('li'); li.textContent = f; learnedList.appendChild(li); });
-    
+
     gameoverOverlay.classList.remove('hidden'); sfxHit();
 }
 
@@ -1036,13 +1036,13 @@ function update() {
             if (powerTimer <= 0) {
                 activePower = null; removeAura(); hudPower.className = 'power-inactive';
                 hudPower.textContent = 'No Power';
-                
+
                 // Revert Super Singhuu
-                if(isSuperForm) {
+                if (isSuperForm) {
                     isSuperForm = false;
                     playerGroup.scale.set(1.0, 1.0, 1.0);
                     playerHead.visible = true;
-                    if(playerMane) playerMane.visible = true;
+                    if (playerMane) playerMane.visible = true;
                     playerBody.material = baseBodyMaterials;
                     spawnParticle(playerGroup.position.clone(), 0xFFFFFF, 10);
                 }
@@ -1051,13 +1051,13 @@ function update() {
 
         clouds.forEach(c => {
             c.mesh.position.z += effectiveSpeed * 0.2; c.mesh.position.x += c.speed;
-            if(c.mesh.position.z > 20) { c.mesh.position.z = -200; c.mesh.position.x = (Math.random()-0.5)*150; }
+            if (c.mesh.position.z > 20) { c.mesh.position.z = -200; c.mesh.position.x = (Math.random() - 0.5) * 150; }
         });
         birds.forEach(b => {
             b.mesh.position.z += effectiveSpeed * 0.5 + 0.1;
             b.wingL.rotation.z = Math.sin(clock.getElapsedTime() * b.flapRate) * 0.5;
             b.wingR.rotation.z = -Math.sin(clock.getElapsedTime() * b.flapRate) * 0.5;
-            if(b.mesh.position.z > 20) { b.mesh.position.z = -150 - Math.random()*100; b.mesh.position.x = (Math.random()-0.5)*40; }
+            if (b.mesh.position.z > 20) { b.mesh.position.z = -150 - Math.random() * 100; b.mesh.position.x = (Math.random() - 0.5) * 40; }
         });
 
         // ── Obstacles: Collision, Near-Miss, and Power Interaction ──
@@ -1077,7 +1077,7 @@ function update() {
             // Safe interaction - No damage during slowdown
             if (effectiveSpeed > 0.01 && obs.mesh.position.z > -1.5 && obs.mesh.position.z < 1.0) {
                 const horizontalHit = Math.abs(LANES[obs.lane] - playerGroup.position.x) < (isSuperForm ? 1.8 : 1.2);
-                
+
                 // Barrier handling: slides dodge, jumps don't help
                 let verticalHit;
                 if (obs.type === 'barrier') {
@@ -1120,7 +1120,7 @@ function update() {
                 const dx = playerGroup.position.x - coin.mesh.position.x;
                 const dz = playerGroup.position.z - coin.mesh.position.z;
                 const dy = playerGroup.position.y - coin.mesh.position.y;
-                const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+                const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
                 if (dist < MAGNET_RANGE) {
                     const pullForce = 0.15 * (1 - dist / MAGNET_RANGE);
                     coin.mesh.position.x += dx * pullForce;
@@ -1214,7 +1214,7 @@ function update() {
     }
 
     camera.lookAt(playerGroup.position.x * 0.2, 1, -10);
-    
+
     // Update external 3D model animations
     if (foxMixer && (gameState === 'PLAYING' || gameState === 'BULLET_TIME')) {
         foxMixer.update(clock.getDelta() * bulletTimeScale * (effectiveSpeed / baseSpeed));
