@@ -1,0 +1,234 @@
+{
+  "main": {
+    "id": "592588baa78a6793",
+    "type": "split",
+    "children": [
+      {
+        "id": "1cb902f7cefad301",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "565d07c6a7aacc46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tasks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tasks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7bccbc7cf57f7c49",
+    "type": "split",
+    "children": [
+      {
+        "id": "6587603cb2225298",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e34fdbc33f28a7a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "743051c70519fc78",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "path:\"BizAiz/Knowledge/\" ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "59e1c89ca56221ae",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "94bdef6749b04888",
+    "type": "split",
+    "children": [
+      {
+        "id": "07207fdc63f78dd9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac2e753ed2e21077",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "BizAiz/Business Aquization Name for business.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Business Aquization Name for business"
+            }
+          },
+          {
+            "id": "33cc40389f79aa32",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "BizAiz/Business Aquization Name for business.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Business Aquization Name for business"
+            }
+          },
+          {
+            "id": "c95fb99f8d266aa9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cb1f64107615aab9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5ccd6be41d1a7d13",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "BizAiz/Business Aquization Name for business.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Business Aquization Name for business"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "565d07c6a7aacc46",
+  "lastOpenFiles": [
+    "BizAiz/Business Aquization Name for business.md",
+    "BizAiz/Business acquisition.md",
+    "Capital Event Space  Startup Networking Venue/Multi Names Selection.md",
+    "CapitalClub.one/About Capital Club.md",
+    "CapitalClub.one/Venue Overview.md",
+    "CapitalClub.one/Venue.md",
+    "Saloon Business/Follow Up - 19 Saloon Talk close that deal because Arun sir sister Lakshmi asked few days for further documents submission.md",
+    "Saloon Business/Saloon Business Magic Mirrors.md",
+    "Tasks.md",
+    "CapitalClub.one/Capital Club_files/030-idea.webp",
+    "Capital Event Space  Startup Networking Venue/Host First Event Ideas.md",
+    "Capital Event Space  Startup Networking Venue/Capital Event Space  Startup Networking Venue.md",
+    "Capital Event Space  Startup Networking Venue/Host First Event Execution.md",
+    "Capital Event Space  Startup Networking Venue/AI & Startup Innovation Summit.md",
+    "BizAiz/names.md",
+    "Untitled.md",
+    "CapitalClub.one/Capital Club_files/039-target.webp",
+    "Capital Event Space  Startup Networking Venue",
+    "CapitalClub.one/Untitled.md",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/Untitled 3.md",
+    "BizAiz/WordPress learn.md",
+    "BizAiz/Follow Up - 16 april Listing pro purchase.md",
+    "Saloon Business",
+    "Events hosting document preparation and submission.md",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/CapitalClub/Variant 3.md",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/CapitalClub/10l home.md",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/CapitalClub/Variant 2 on 10L.md",
+    "BizAiz/Knowledge/Finance Docs/7 stages of financial freedom.md",
+    "BizAiz/Awaiting Feedback/MagicMirror Spa & Saloon/Business Financial.md",
+    "BizAiz/Awaiting Feedback/MagicMirror Spa & Saloon/Statement.pdf",
+    "BizAiz/Awaiting Feedback/MagicMirror Spa & Saloon/Last 6 Month Sales Report.xlsx",
+    "BizAiz/Awaiting Feedback/MagicMirror Spa & Saloon/Acct Statement_7381_10042026_17.33.32.xls",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/Pasted image 20260408112902.png",
+    "BizAiz/Awaiting Feedback/Madras Deck Pitch Deck/CapitalClub",
+    "BizAiz/Knowledge/Finance Docs",
+    "BizAiz/BizAiz/Software",
+    "BizAiz/BizAiz/bizaiz_pitch_deck_script.html",
+    "BizAiz/BizAiz/Madras Deck Pitch Deck.txt",
+    "CapitalClub.one/Capital Club_files/students-sit-facing-camera-in-a-modern-university-2023-11-27-05-33-56-utc.webp",
+    "CapitalClub.one/Capital Club_files/side-view-of-mixed-race-businessman-asking-questio-2023-11-27-05-20-19-utc.webp",
+    "CapitalClub.one/Capital Club_files/side-view-of-caucasian-businessman-standing-and-gi-2023-11-27-05-30-59-utc.webp",
+    "CapitalClub.one/Capital Club_files/side-view-of-caucasian-businessman-standing-and-gi-2023-11-27-05-30-59-utc-copy2.webp",
+    "CapitalClub.one/Capital Club_files/rear-view-of-audience-showing-hand-to-answer-the-q-2024-02-23-05-04-16-utc.webp",
+    "CapitalClub.one/Capital Club_files/Logo.png",
+    "CapitalClub.one/Capital Club_files/Logo-White-1024x160.png"
+  ]
+}

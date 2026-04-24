@@ -1,0 +1,1 @@
+getting a huge land or just burn the ocean and create a new land , increase in size give pressure from one side of the land a new land will be created like parasuram created kerala and 

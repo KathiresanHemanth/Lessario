@@ -1,0 +1,122 @@
+Skip to content
+
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp Madras Deck The Entertainment You Deserve We are involved in producing films, television & web series on various topics, while continuously exploring the best way to expose artists and technicians to innovative techniques. Get Started Now Showing Music Merchandise Rental Business Studios Services Careers What we do The company’s expertise lies in its ability to transform cinematic content into a variety of formats, catering to both traditional theatrical consumption as well as newer digital consumption habits. Idea Development The source of a polished, professional video product is the Idea and the video distribution plan Scripting Writing the scripts and making storyboards for it with latest technologies saving a lot of time and other resources Production The phase where we make the actual video. With well-thought-out pre-production, this will be a seamless experience Post Production This is the step where a lot of the emotions you hoped to evoke in the first phase is brought out. Material Review When we believe that we have a product that is ready for distribution, we will get you re-involved with the process. Distribution It’s time to execute what your purpose for making a video was in the first place. Final Cut with license to distribute on any platform they’d like All Services Production Services on Demand Studio Rental Equipment Rental Explore More "Amazing Videos and Quality Work!" Rajesh Kannan Vintage sound garage Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Open chaty Hide WhatsApp FormSkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp About Us Welcome to Madras Deck We are a team that has experience in various forms of entertainment, combined with the knowledge and expertise of creativity, culture, philanthropy and corporate governance. Who Are We A company that came together through the efforts of young minds with a deep rooted interest to promote art, music, and other performing arts, a bandwagon of young artists who through Innova technology shall bring to you various forms of entertainment. Our Mission We desire to transform content that will cater to both the new age digital era and traditional theatrical methods at the same time. What We Do
+- Video Production
+- Audio Production
+- Motion Graphics
+- Animation
+- Editing
+- Grading
+- Studio Rental
+- Equipment Rental
+- Marketing & Distribution Movies made in India for the World We are not just a movie production company. We are also storytellers. Best creative talents We work with the best creative talents across the globe, to create films that tell compelling stories, break new ground and bring in international cinematic standards. For global audience Our films cater to different movie-watching habits - be it on TV, on mobile or at a theatre near you. We create content for all platforms, catering to every generation. Quality without borders We, at Madras Deck, make films with universal appeal - films that meet international standards of quality Safe investment opportunity As experts in the industry, we provide investors with a transparent and safe investment opportunity in the movie industry Why Choose Us? We’re always improving! Best Quality Madras Deck is always investing in the latest technologies to make our films even more creative and innovative. Our team of experts have a combined experience of over 25 years, which means we know what we’re doing! 24x7 Support Result Oriented Projects Award Winning Team Best ROI Techniques Software Based Approach Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Open chatySkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp Production Production is a very complicated process that requires a lot of collaboration and coordination Our Simple Process
+
+Script The production process starts with the scriptwriter who creates a story line or script 02. Production Coordinating with departments – casting, cinematography, art, costumes, editing, and much more 03. Essentials After filming is complete editing begins which includes sound, visual effects, and music editing Start a project Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Hide WhatsApp Form Hide WhatsApp Form How can we help you? :) WhatsApp Message undefinedSkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp Services We provide a wide range of Services On demand services with strong portfolio and competitive rates Media services are a growing field that has expanded over the last 20 years. There is an increasing demand for professionals in media services who can produce quality content for a variety of clients. The editing process is one of the most crucial steps in the production process and requires editors to have a keen eye for detail and an ability to work with deadlines. Audio production is another important part of media services which includes sound mixing, voice-overs, and other audio-related tasks. Animation is also an important part of media services which includes both 2D and 3D animation, as well as motion graphics. Special effects are used in film production to create spectacular visual effects that would otherwise be impossible to achieve on set or location. Consulting is another aspect of media services which involves providing advice or knowledge about the industry to
+- Editing
+- Audio Production
+- Animation
+- Special Effects
+- Promotions
+- Consulting Contact now Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Hide WhatsApp Form Hide WhatsApp Form How can we help you? :) WhatsApp Message undefinedSkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp Equipment Rental Let us take care of the needs of your production from cameras, props, backdrops, casting services, catering to post-production needs. We have a large array of equipment, competitive rates and availability for all times of day. Contact us for details. We offer the latest and best audio visual equipment for rent and are always innovating with different ways to help you make your event a success. Stop worrying about which equipment to rent and where to book it from. We make renting A-Z easy! Renting Cinema gear has never been easier! With our best price guarantee, 24-hour customer service, and free delivery in Chennai*, you’re bound to find what you need and love how easy it was getting it. What We Have
+- Coming soon
+- Coming soon Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Hide WhatsApp Form Hide WhatsApp Form How can we help you? :) WhatsApp Message undefinedSkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp AR Studios The Place Where Magic Happens Rent a studio online, or book recording services from our professional team. We have the perfect space for your production needs. At AR Studios, we’re passionate about audio and video. We believe in the power of recording, mixing and mastering to make creative visions become reality. What we do
+- Recording Sound, Music and Voice
+- Music Production
+- Programming
+- Dubbing
+- Commercial Voice Over
+- Audio Editing
+- Re-Recording
+- Consulting
+- Audio Post Production
+- Mixing
+- Mastering
+- Music Distribution
+- and more… One Stop Place At AR Studios, we have the latest high-end equipments and equipment to get your project done quickly and professionally. Our studios boast spacious vocal booths, a high-tech console room, and a lounge area to make your experience as serene as possible. AR Studios is the perfect place for all your audio needs – whether it’s booking a professional recording studio rental or recording services, we’ve got it all. From Vocal Recording to Music Production and everything in-between, AR Studios can provide it all at prices that are hard to beat! Book Now Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Hide WhatsApp Form Hide WhatsApp Form How can we help you? :) WhatsApp Message undefinedSkip to content
+- Home
+- About * *
+- Services * * * * *
+- Business * *
+- Merchandise
+- Careers
+- Contact
+- WhatsApp Business The happiness that a good movie must have given would have been more delicious than a heavy paycheck or a large balance sheet ever has! In a company that has amazing young minds with passion burning high, numbers do a happier dance on our balance sheet and we are twice happier seeing you give that a new lease of life all day, everyday. We’re not just crafting content; we’re creating experiences that captivate, resonate, and leave a lasting impact. Here’s why this investment opportunity is your ticket to a front-row seat in the world of media Contact us
+- +91 95000 46121
+- info@madrasdeck.com
+- arun@madrasdeck.com 30,00,000 INR (Minimum Investment) 18% returns p.a 24 Months Lock-in 100% Satisfaction Innovation at its Core; We don’t just follow trends; we set them. Our commitment to pushing creative boundaries ensures that your investment is fueling projects that stand out in a crowded market. From film and television to digital content and branded entertainment, we’ve strategically diversified our projects to maximize revenue potential, mitigating risks associated with industry fluctuations. With a finger on the pulse of industry trends, we are poised to capitalize on emerging opportunities. Your investment is not just in the present; it’s in the future of media and entertainment. Interested in Investing? Our startup is new, but we’re not! We’ll be investing into new films and productions, making this an amazing opportunity to invest with the best returns guaranteed We’re looking for investors who are interested in the long term, and would like to get in on what we believe will be one of the biggest successes. With our exclusive insider community, you’ll get access to not only funding opportunities but also other ventures that are coming up soon. +91 95000 46121 Become an Investor While you’d say there’s multiple ways to let your money work, ever thought of letting it grow at an avenue that’s given you so much joy! +91 95000 46121 +91 95000 46121 Mail us at info@madrasdeck.com Address:
+- Communication Address:
+- #1015, 78th Street, 12th Sector, KK Nagar, Chennai 600078
+- Regd. Address:
+- 949, 1st Floor, 66th Street, 11th Sector, KK Nagar, Chennai 600078 Facebook Twitter Instagram Youtube Whatsapp Copyright © 2024 Madras Deck | Powered by Hischip Hide WhatsApp Form Hide WhatsApp Form How can we help you? :) WhatsApp Message undefined

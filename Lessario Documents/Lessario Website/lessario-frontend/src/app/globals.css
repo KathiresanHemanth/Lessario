@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #f0f0f0;
+  
+  --primary: #6366f1;
+  --secondary: #ec4899;
+  --accent: #14b8a6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mesh-bg {
+  background-color: #050505;
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(245, 100%, 75%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(328, 100%, 74%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(175, 100%, 77%, 0.1) 0px, transparent 50%);
+}
+
+/* Game loading spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,25 @@
+# Build directories
+build/
+bin/
+obj/
+out/
+Release/
+Debug/
+x64/
+x86/
+
+# IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+
+# Engine specific
+LessarioEngine/build/
+LessarioEngine/out/
+
+# Other
+node_modules/
+.DS_Store
+Thumbs.db

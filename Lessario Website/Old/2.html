@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessario Studios. Innovation in Play.™</title>
+    <style>
+        :root {
+            /* The Core Jobs Palette: Absolute Simplicity */
+            --bg-base: #000000;
+            /* True Black. The Infinite. */
+            --bg-elevated: #111111;
+            /* Elevated Black. Subtle difference. */
+            --text-primary: #ffffff;
+            /* Pure White. The Absolute. */
+            --text-secondary: #a1a1a1;
+            /* Refined Grey. For the humble details. */
+            --accent-silver: #f5f5f7;
+            /* A premium, metallic silver. */
+
+            /* Typography: Precision and Impact */
+            --font-family-base: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+
+            /* Spacing: Jobs LOVED White Space (or Black Space) */
+            --section-padding: 10vh;
+            /* Large vertical padding for focus. */
+            --max-content-width: 1080px;
+            /* Precise width for readable focus. */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: default;
+            /* Steve would hate the little hand cursor everywhere. */
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            line-height: 1.47;
+        }
+
+        /* Nav: Centered. Minimal. Invisible. */
+        header {
+            background-color: rgba(0, 0, 0, 0.85);
+            /* Highly translucent */
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            /* Subtle dividing line */
+        }
+
+        .nav-container {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            padding: 0 22px;
+            display: flex;
+            justify-content: center;
+            /* Center the links */
+            align-items: center;
+            height: 48px;
+            /* The classic Apple bar height */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 34px;
+            /* Jobs-precise spacing */
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: -0.01em;
+            text-transform: capitalize;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* Standard Section structure for consistent spacing */
+        .section {
+            padding: var(--section-padding) 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            /* Most sections take most of the screen */
+        }
+
+        .section-content {
+            max-width: var(--max-content-width);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Typography - Jobs Level Impact */
+        .huge-headline {
+            font-size: 80px;
+            font-weight: 700;
+            letter-spacing: -0.015em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero-headline {
+            font-size: 96px;
+            /* Insanely huge */
+            background: linear-gradient(135deg, #fff 0%, var(--accent-silver) 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sub-headline {
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 50px auto;
+            line-height: 1.35;
+        }
+
+        /* The Only Button on the Site. Focus. */
+        .cta-btn {
+            display: inline-block;
+            padding: 18px 48px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 980px;
+            /* Fully pill-shaped */
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.02);
+            background-color: #f0f0f0;
+        }
+
+        /* Hero Section - Maximum Emotional Hook */
+        .hero {
+            background-color: var(--bg-elevated);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Breaking the grid for Services - Jobs' Vertical Storytelling */
+        .services-flow {
+            padding-top: var(--section-padding);
+        }
+
+        .service-item {
+            padding: 10vh 0;
+            border-bottom: 1px solid #111;
+            /* Invisible divider on hover/interaction */
+        }
+
+        .service-item h3 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .service-item p {
+            font-size: 21px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Craftsmanship (Training) Section */
+        .craftsmanship {
+            background-color: #fff;
+            /* Flip to white background for impact */
+            color: #000;
+        }
+
+        .craftsmanship .huge-headline {
+            color: #000;
+            font-size: 64px;
+        }
+
+        .craftsmanship .sub-headline {
+            color: #333;
+        }
+
+        .craftsmanship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-top: 80px;
+        }
+
+        .craft-card {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            /* Subtle black border */
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .craft-card h4 {
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .craft-card p {
+            font-size: 14px;
+            font-weight: 300;
+            color: #333;
+        }
+
+        /* The "Hemanth" Section - Human Connection */
+        .founder-section {
+            background-color: var(--bg-elevated);
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 100px;
+            text-align: left;
+            align-items: center;
+        }
+
+        .founder-details h2 {
+            font-size: 40px;
+            font-weight: 600;
+        }
+
+        .founder-details p {
+            color: var(--text-secondary);
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        /* Footer - Practical but Clean */
+        footer {
+            background-color: var(--bg-base);
+            border-top: 1px solid #222;
+            padding: 60px 22px 40px 22px;
+            font-size: 12px;
+            color: #86868b;
+        }
+
+        .footer-content {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-left strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .footer-left a {
+            color: #86868b;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .footer-left a:hover {
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-links a {
+            color: #86868b;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .copyright {
+            color: #86868b;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        /* Essential Mobile Response */
+        @media (max-width: 734px) {
+            .hero-headline {
+                font-size: 48px;
+            }
+
+            .huge-headline {
+                font-size: 42px;
+            }
+
+            .sub-headline {
+                font-size: 21px;
+            }
+
+            .service-item h3 {
+                font-size: 28px;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="#creation">Creation</a>
+                <a href="#craft">Craft</a>
+                <a href="#vision">Vision</a>
+                <a href="#contact">Collaborate</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero section">
+        <div class="section-content">
+            <h1 class="huge-headline hero-headline">Innovation<br>in Play.™</h1>
+            <p class="sub-headline">Lessario Studios creates new realities, not just games. We build universes—VR, XR,
+                Mobile—and forge stunning visual storytelling that must be experienced to be believed. Based in Chennai.
+            </p>
+            <a href="#contact" class="cta-btn">Experience The Craft</a>
+        </div>
+    </section>
+
+    <section id="creation" class="section services-flow">
+        <div class="section-content">
+            <div class="service-item">
+                <h3>Reality Engine</h3>
+                <p>We craft breathtaking immersive experiences across VR, XR, PC, Mobile, and Web HTML. We don’t just
+                    deploy technology; we invent engagement.</p>
+            </div>
+            <div class="service-item">
+                <h3>Kinetic Light</h3>
+                <p>3D Animation and VFX that transcend screens. We design visuals for games, film, and ads that push
+                    cinematic boundaries. If you can dream it, we render it.</p>
+            </div>
+            <div class="service-item">
+                <h3>World Building</h3>
+                <p>Detailed movie production environments that are more than background. We create distinct, authentic
+                    spatial designs ready for virtual production.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="craft" class="section craftsmanship">
+        <div class="section-content">
+            <h2 class="huge-headline">Craftsmanship,<br>Mentored.</h2>
+            <p class="sub-headline">We don't offer 'courses'. We offer mentorship. This is a commitment. For businesses
+                and creators, this is about mastering the art of the possible.</p>
+
+            <div class="craftsmanship-grid">
+                <div class="craft-card">
+                    <h4>The Unreal Artist</h4>
+                    <p>Game Development and Design. Mastering the tools of the future creator.</p>
+                </div>
+                <div class="craft-card">
+                    <h4>The Invisible Thread</h4>
+                    <p>VFX and Video Editing. How to tell a story between the frames.</p>
+                </div>
+                <div class="craft-card">
+                    <h4>Aesthetic Engine</h4>
+                    <p>Graphic Design & CAD/Interior. Designing the digital and physical universe.</p>
+                </div>
+                <div class="craft-card">
+                    <h4>The Sentient Web</h4>
+                    <p>AI Development & Full Stack Web. Building the intelligence that powers tomorrow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="section founder-section">
+        <div class="section-content founder-content">
+            <div class="founder-details">
+                <h1 class="huge-headline">A Vision<br>Executed.</h1>
+                <p>Founded in 2024 with a singular purpose: to cross the chasm between technology and visual
+                    storytelling. We are a dedicated family of 11-50, including over 40 professional creatives based in
+                    Chennai, Tamil Nadu.</p>
+                <p>Led by <strong>Hemanth Kumar PK</strong>, we bring an obsessive attention to detail to every global
+                    collaboration.</p>
+                <div style="font-size: 14px; color: var(--text-secondary); margin-top: 20px;">Key Craftsmen include
+                    Blessing D (3D Artist, BSc Game Design) and Sam Thesigan (Social Media).</div>
+            </div>
+            <div
+                style="text-align: center; color: var(--accent-silver); font-size: 10rem; font-weight: 700; background: linear-gradient(180deg, #333 0%, #000 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; padding: 20px;">
+                40+</div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-left">
+                <strong>Lessario Studios.</strong>
+                Chennai, Tamil Nadu, India.<br>
+                Reach out. We listen.<br>
+                <a href="mailto:lessariostudios@gmail.com">lessariostudios@gmail.com</a>
+            </div>
+            <div class="footer-links">
+                <a href="https://linktr.ee/lessariostudios" target="_blank">Portfolio</a> /
+                <a href="https://twitter.com/lessariostudios" target="_blank">X</a>
+            </div>
+        </div>
+
+        <p class="copyright">&copy; 2024 Lessario Studios. Simplification is the ultimate sophistication. All rights
+            reserved.</p>
+    </footer>
+
+</body>
+
+</html>
