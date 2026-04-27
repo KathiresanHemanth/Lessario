@@ -1,0 +1,15 @@
+{
+  "name": "sports-lead-scraper",
+  "version": "1.0.0",
+  "description": "Stealthy lead generation engine for the Indian Sports Industry",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "crawlee": "^3.16.0",
+    "playwright": "^1.59.1"
+  }
+}
