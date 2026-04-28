@@ -1,0 +1,404 @@
+GRADE MANAGEMENT SYSTEM - PROJECT 2 - STEP BY STEP TASKS
+
+=== TASK 1: Print Welcome Message ===
+Create a file called GradeSystem_Step1.c
+
+#include <stdio.h>
+
+int main() {
+    printf("=== Grade Management System ===\n");
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- #include <stdio.h> → includes library for printf()
+- printf() → prints text to screen
+- system("pause") → pauses so you can see the output
+- return 0 → program ends successfully
+
+What to do:
+1. Create new file GradeSystem_Step1.c
+2. Copy the code above
+3. Compile: gcc GradeSystem_Step1.c -o grade_step1.exe
+4. Run: .\grade_step1.exe
+5. You should see the welcome message
+
+---
+
+=== TASK 2: Get Marks for One Subject ===
+Create GradeSystem_Step2.c
+
+#include <stdio.h>
+
+int main() {
+    int marks;
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for Subject 1 (0-100): ");
+    scanf("%d", &marks);
+    
+    printf("You entered: %d\n", marks);
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- int marks → variable to store marks (integer type)
+- scanf("%d", &marks) → takes input from user and stores in 'marks'
+  - %d means integer
+  - & means "address of marks" (where to store the input)
+- printf("You entered: %d\n", marks) → prints the value we stored
+
+What to do:
+1. Create file GradeSystem_Step2.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 85, should print "You entered: 85"
+
+---
+
+=== TASK 3: Get Marks for 5 Subjects ===
+Create GradeSystem_Step3.c
+
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for 5 subjects (0-100):\n");
+    
+    // This loop runs 5 times
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+    }
+    
+    printf("\nYou entered:\n");
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: %d\n", i + 1, marks[i]);
+    }
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- int marks[5] → array that stores 5 integers
+  - marks[0] = first subject
+  - marks[1] = second subject
+  - marks[4] = fifth subject
+
+- for(int i = 0; i < 5; i++) → loop that runs 5 times
+  - i starts at 0
+  - loop continues while i < 5
+  - after each loop, i increases by 1
+
+- marks[i] → accesses the i-th element in array
+- i + 1 → adds 1 to i (so we show "Subject 1" instead of "Subject 0")
+
+What to do:
+1. Create file GradeSystem_Step3.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 80, 85, 90, 95, 88
+5. Should print all 5 marks you entered
+
+---
+
+=== TASK 4: Calculate Total Marks ===
+Create GradeSystem_Step4.c
+
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    float total = 0;
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for 5 subjects (0-100):\n");
+    
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        total += marks[i];  // ADD each mark to total
+    }
+    
+    printf("\n--- Results ---\n");
+    printf("Total Marks: %.0f\n", total);
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- float total = 0 → variable to store total (decimal numbers)
+  - we use float because average might have decimals
+  - = 0 means we start at 0
+
+- total += marks[i] → means: total = total + marks[i]
+  - += is shorthand for "add and store"
+  - so if total was 80 and marks[i] is 90, total becomes 170
+
+- %.0f → format for printing decimals
+  - % = special format code
+  - .0 = show 0 decimal places
+  - f = means it's a float number
+
+What to do:
+1. Create file GradeSystem_Step4.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 80, 85, 90, 95, 88
+5. Should print "Total Marks: 438"
+
+---
+
+=== TASK 5: Calculate Average ===
+Create GradeSystem_Step5.c
+
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    float total = 0, average;
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for 5 subjects (0-100):\n");
+    
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        total += marks[i];
+    }
+    
+    // CALCULATE AVERAGE
+    average = total / 5;
+    
+    printf("\n--- Results ---\n");
+    printf("Total Marks: %.0f\n", total);
+    printf("Average: %.2f\n", average);
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- average = total / 5 → divides total by 5 subjects to get average
+  - if total is 438, average = 438 / 5 = 87.6
+
+- float average → stores decimal result
+  - if we used int, it would show 87 (without decimals)
+
+- %.2f → format for printing decimals
+  - .2 = show 2 decimal places
+  - so 87.6 displays as 87.60
+
+What to do:
+1. Create file GradeSystem_Step5.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 80, 85, 90, 95, 88
+5. Should print:
+   - Total Marks: 438
+   - Average: 87.60
+
+---
+
+=== TASK 6: Assign Grade Based on Average ===
+Create GradeSystem_Step6.c
+
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    float total = 0, average;
+    char grade;
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for 5 subjects (0-100):\n");
+    
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        total += marks[i];
+    }
+    
+    average = total / 5;
+    
+    // DETERMINE GRADE
+    if(average >= 90) {
+        grade = 'A';
+    } 
+    else if(average >= 80) {
+        grade = 'B';
+    } 
+    else if(average >= 70) {
+        grade = 'C';
+    } 
+    else if(average >= 60) {
+        grade = 'D';
+    } 
+    else {
+        grade = 'F';
+    }
+    
+    printf("\n--- Results ---\n");
+    printf("Total Marks: %.0f\n", total);
+    printf("Average: %.2f\n", average);
+    printf("Grade: %c\n", grade);
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION:
+- char grade → variable to store a single character (letter A, B, C, D, or F)
+
+- if(average >= 90) → checks if average is greater than or equal to 90
+  - >= means "greater than or equal to"
+
+- if-else chain → checks multiple conditions:
+  - FIRST if average >= 90 → grade = 'A'
+  - ELSE if average >= 80 → grade = 'B'
+  - ELSE if average >= 70 → grade = 'C'
+  - ELSE if average >= 60 → grade = 'D'
+  - ELSE → grade = 'F' (all other cases)
+
+- 'A' is a CHAR (single character in quotes)
+  - different from "A" which is a STRING (group of characters)
+
+- %c → prints a single character
+
+GRADE SCALE:
+- 90-100 = A (Excellent)
+- 80-89  = B (Good)
+- 70-79  = C (Average)
+- 60-69  = D (Below Average)
+- Below 60 = F (Fail)
+
+What to do:
+1. Create file GradeSystem_Step6.c
+2. Copy code
+3. Compile and run
+4. Test different scenarios:
+   - Enter 95, 95, 95, 95, 95 → Average: 95.00, Grade: A
+   - Enter 85, 85, 85, 85, 85 → Average: 85.00, Grade: B
+   - Enter 70, 70, 70, 70, 70 → Average: 70.00, Grade: C
+   - Enter 65, 65, 65, 65, 65 → Average: 65.00, Grade: D
+   - Enter 50, 50, 50, 50, 50 → Average: 50.00, Grade: F
+
+---
+
+=== TASK 7: FINAL PROJECT - Complete Grade System ===
+Create GradeSystem_Final.c
+
+#include <stdio.h>
+
+int main() {
+    int marks[5];
+    float total = 0, average;
+    char grade;
+    
+    printf("=== Grade Management System ===\n");
+    printf("Enter marks for 5 subjects (0-100):\n");
+    
+    // INPUT MARKS FOR 5 SUBJECTS
+    for(int i = 0; i < 5; i++) {
+        printf("Subject %d: ", i + 1);
+        scanf("%d", &marks[i]);
+        total += marks[i];
+    }
+    
+    // CALCULATE AVERAGE
+    average = total / 5;
+    
+    // DETERMINE GRADE
+    if(average >= 90) {
+        grade = 'A';
+    } 
+    else if(average >= 80) {
+        grade = 'B';
+    } 
+    else if(average >= 70) {
+        grade = 'C';
+    } 
+    else if(average >= 60) {
+        grade = 'D';
+    } 
+    else {
+        grade = 'F';
+    }
+    
+    // DISPLAY RESULTS
+    printf("\n--- Results ---\n");
+    printf("Total Marks: %.0f\n", total);
+    printf("Average: %.2f\n", average);
+    printf("Grade: %c\n", grade);
+    
+    system("pause");
+    return 0;
+}
+
+CODE EXPLANATION - COMPLETE PROGRAM:
+1. Include stdio.h library
+2. Declare variables:
+   - marks[5] → array for 5 subjects
+   - total → sum of all marks
+   - average → marks divided by 5
+   - grade → letter grade (A/B/C/D/F)
+
+3. Input Phase:
+   - Loop 5 times to get marks for each subject
+   - Add each mark to total
+
+4. Calculate Phase:
+   - Divide total by 5 to get average
+
+5. Grade Assignment Phase:
+   - Use if-else chain to assign grade based on average
+
+6. Output Phase:
+   - Print total, average, and grade
+
+What to do:
+1. Create file GradeSystem_Final.c
+2. Copy code
+3. Compile: gcc GradeSystem_Final.c -o grade_final.exe
+4. Run: .\grade_final.exe
+5. Test all cases:
+   - Test Case 1: 95, 94, 92, 91, 93 → Grade: A
+   - Test Case 2: 82, 85, 88, 79, 81 → Grade: B
+   - Test Case 3: 72, 75, 71, 70, 73 → Grade: C
+   - Test Case 4: 62, 65, 68, 61, 64 → Grade: D
+   - Test Case 5: 45, 50, 48, 52, 55 → Grade: F
+
+---
+
+SUMMARY - STEP BY STEP:
+Step 1: Print welcome message
+Step 2: Take input for one subject
+Step 3: Take input for 5 subjects using array
+Step 4: Calculate total marks
+Step 5: Calculate average
+Step 6: Assign grade based on average
+Step 7: Combine all into final project
+
+TOTAL TIME: 45 minutes to 1 hour
+
+KEY CONCEPTS LEARNED:
+✓ Variables and data types (int, float, char)
+✓ Arrays (storing multiple values)
+✓ Loops (for loop with counter)
+✓ Input/Output (scanf, printf)
+✓ If-else chains (multiple conditions)
+✓ Operators (+=, >=, /)
+✓ Formatting output (%.0f, %.2f, %c, %d)
+
+NEXT STEPS:
+After completing this project:
+- Move to Project 3: Number Guessing Game
+- Practice modifying this program (e.g., add more subjects, different grade scale)
+- Understand every line of code you wrote
