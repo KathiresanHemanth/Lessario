@@ -28,9 +28,10 @@ const crawler = new PlaywrightCrawler({
         log.info(`Scouting Category: ${category} - URL: ${request.url}`);
 
         try {
-            // Short delay: SearxNG handles the proxying, but we still don't want to spam our local server too hard
-            const delay = Math.floor(Math.random() * (4000 - 2000 + 1) + 2000);
-            log.info(`Waiting ${delay/1000} seconds...`);
+            // MASSIVE Anti-Bot Delay: We were hammering the engines too fast, causing IP bans.
+            // Waiting 15 to 25 seconds between pages to mimic a real human reading search results.
+            const delay = Math.floor(Math.random() * (25000 - 15000 + 1) + 15000);
+            log.info(`Waiting ${delay/1000} seconds to avoid IP Bans...`);
             await page.waitForTimeout(delay);
             
             // Wait for SearxNG results to load
@@ -50,23 +51,54 @@ const crawler = new PlaywrightCrawler({
                 });
             });
 
-            // Strict filter: MUST be a LinkedIn URL and MUST mention India or be on the 'in.' subdomain
+            // Strict filter: MUST be a LinkedIn URL
             const validLeads = leads.filter(lead => {
                 const isLinkedIn = lead.link && lead.link.includes('linkedin.com/in/');
                 const isIndianDomain = lead.link && lead.link.includes('in.linkedin.com');
-                const mentionsIndia = (lead.title + lead.snippet).toLowerCase().includes('india');
                 
-                // Keep it if it's an Indian domain OR if it explicitly mentions India in the text
-                return isLinkedIn && (isIndianDomain || mentionsIndia);
+                const text = (lead.title + ' ' + lead.snippet).toLowerCase();
+                const isIndianLocation = text.includes('india') || 
+                                         text.includes('mumbai') || 
+                                         text.includes('delhi') || 
+                                         text.includes('bangalore') || 
+                                         text.includes('bengaluru') ||
+                                         text.includes('pune') ||
+                                         text.includes('hyderabad') ||
+                                         text.includes('chennai');
+                
+                return isLinkedIn && (isIndianDomain || isIndianLocation);
             });
 
+            if (leads.length > 0) {
+                // If we found results, and we haven't hit the 20 page limit, enqueue the next page!
+                const currentPage = request.userData.pageNum;
+                if (currentPage < 20) {
+                    const nextPage = currentPage + 1;
+                    const nextUrl = request.url.replace(`&pageno=${currentPage}`, `&pageno=${nextPage}`);
+                    await crawler.addRequests([{
+                        url: nextUrl,
+                        userData: { category, pageNum: nextPage }
+                    }]);
+                    log.info(`Enqueued Page ${nextPage} for ${category}...`);
+                }
+            } else {
+                log.warning(`Hit the end of the search results for ${category} at Page ${request.userData.pageNum}. Stopping this category.`);
+            }
+
             if (validLeads.length === 0 && leads.length > 0) {
-                log.warning(`Found ${leads.length} results for ${category}, but none matched the "India" location filter.`);
+                log.warning(`Found ${leads.length} results for ${category}, but none matched the strict India location filter.`);
             }
 
             for (const lead of validLeads) {
+                // Look for Indian mobile numbers in the snippet or title
+                // Pattern: Matches 10-digit numbers starting with 6-9, optionally with +91 or 0 prefix
+                const phoneRegex = /(?:\+91|0)?[6-9]\d{9}/g;
+                const foundPhones = (lead.title + ' ' + lead.snippet).match(phoneRegex);
+                const mobile = foundPhones ? foundPhones[0] : null;
+
                 await Dataset.pushData({
                     ...lead,
+                    mobile,
                     category,
                     scrapedAt: new Date().toISOString(),
                 });
@@ -83,18 +115,25 @@ const crawler = new PlaywrightCrawler({
     },
 });
 
-// Build the queue of searches
+// Build the queue of searches with massive pagination (100 pages per category)
 const searchRequests = [];
 for (const cat of config.categories) {
     const roles = config.roles.map(r => `"${r}"`).join(' OR ');
-    const query = `site:linkedin.com/in/ (${roles}) "${cat}" "${config.location}"`;
+    
+    // Clean the category to handle &, commas, and slashes perfectly for all 16 categories!
+    let cleanedCat = cat.replace(/ & /g, '" OR "');
+    cleanedCat = cleanedCat.replace(/,/g, '');
+    cleanedCat = cleanedCat.replace(/\//g, '" OR "');
+    
+    // This creates perfect queries like: ("AR" OR "VR") or ("Sportswear" OR "Activewear")
+    const query = `site:linkedin.com/in/ (${roles}) ("${cleanedCat}") "${config.location}"`;
 
-    // Routing all searches through our local SearxNG Engine!
-    const searchUrl = `http://127.0.0.1:8888/search?q=${encodeURIComponent(query)}`;
+    // Initialize ONLY Page 1. The script will automatically add Page 2 if Page 1 has results!
+    const searchUrl = `http://127.0.0.1:8888/search?q=${encodeURIComponent(query)}&pageno=1`;
 
     searchRequests.push({
         url: searchUrl,
-        userData: { category: cat }
+        userData: { category: cat, pageNum: 1 }
     });
 }
 

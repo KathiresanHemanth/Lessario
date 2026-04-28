@@ -22,7 +22,16 @@
     "Founder",
     "Co-Founder",
     "Marketing Head",
-    "Head of Partnerships"
+    "Head of Partnerships",
+    "Director",
+    "Managing Director",
+    "Vice President",
+    "VP",
+    "Owner",
+    "Partner",
+    "General Manager",
+    "Consultant",
+    "Lead"
   ],
   "location": "India"
 }
