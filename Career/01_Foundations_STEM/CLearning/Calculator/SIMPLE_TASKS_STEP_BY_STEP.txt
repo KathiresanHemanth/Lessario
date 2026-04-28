@@ -1,0 +1,279 @@
+CALCULATOR PROJECT - STEP BY STEP TASKS
+
+=== TASK 1: Print Welcome Message ===
+Create a file called Calculator_Step1.c with this code:
+
+#include <stdio.h>
+
+int main() {
+    printf("Welcome to Calculator!\n");
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create new file Calculator_Step1.c
+2. Copy the code above
+3. Compile: gcc Calculator_Step1.c -o calc_step1.exe
+4. Run: .\calc_step1.exe
+5. You should see "Welcome to Calculator!"
+
+---
+
+=== TASK 2: Get Two Numbers from User ===
+Create Calculator_Step2.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    printf("You entered: %d and %d\n", num1, num2);
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step2.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 5 and 10, should print "You entered: 5 and 10"
+
+---
+
+=== TASK 3: Add Two Numbers ===
+Create Calculator_Step3.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, sum;
+    
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    sum = num1 + num2;
+    
+    printf("%d + %d = %d\n", num1, num2, sum);
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step3.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 5 and 10, should print "5 + 10 = 15"
+
+---
+
+=== TASK 4: Subtract Two Numbers ===
+Create Calculator_Step4.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, result;
+    
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    result = num1 - num2;
+    
+    printf("%d - %d = %d\n", num1, num2, result);
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step4.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 10 and 3, should print "10 - 3 = 7"
+
+---
+
+=== TASK 5: Multiply Two Numbers ===
+Create Calculator_Step5.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, result;
+    
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    result = num1 * num2;
+    
+    printf("%d * %d = %d\n", num1, num2, result);
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step5.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 5 and 4, should print "5 * 4 = 20"
+
+---
+
+=== TASK 6: Divide Two Numbers ===
+Create Calculator_Step6.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, result;
+    
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    if(num2 != 0) {
+        result = num1 / num2;
+        printf("%d / %d = %d\n", num1, num2, result);
+    } else {
+        printf("ERROR: Cannot divide by zero!\n");
+    }
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step6.c
+2. Copy code
+3. Compile and run
+4. Test: Enter 10 and 2, should print "10 / 2 = 5"
+5. Test: Enter 10 and 0, should print "ERROR: Cannot divide by zero!"
+
+---
+
+=== TASK 7: Create Menu - Ask What Operation ===
+Create Calculator_Step7.c
+
+#include <stdio.h>
+
+int main() {
+    char operation;
+    
+    printf("=== Simple Calculator ===\n");
+    printf("Choose operation:\n");
+    printf("+ for Addition\n");
+    printf("- for Subtraction\n");
+    printf("* for Multiplication\n");
+    printf("/ for Division\n");
+    printf("Enter choice: ");
+    scanf(" %c", &operation);
+    
+    printf("You chose: %c\n", operation);
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Step7.c
+2. Copy code
+3. Compile and run
+4. Test: Enter +, should print "You chose: +"
+
+NOTE: There's a space before %c in scanf - this is important!
+
+---
+
+=== TASK 8: Combine Everything - Final Calculator ===
+Create Calculator_Final.c
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2, result;
+    char operation;
+    
+    printf("=== Simple Calculator ===\n");
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &operation);
+    
+    printf("Enter second number: ");
+    scanf("%d", &num2);
+    
+    if(operation == '+') {
+        result = num1 + num2;
+        printf("%d + %d = %d\n", num1, num2, result);
+    } 
+    else if(operation == '-') {
+        result = num1 - num2;
+        printf("%d - %d = %d\n", num1, num2, result);
+    }
+    else if(operation == '*') {
+        result = num1 * num2;
+        printf("%d * %d = %d\n", num1, num2, result);
+    }
+    else if(operation == '/') {
+        if(num2 != 0) {
+            result = num1 / num2;
+            printf("%d / %d = %d\n", num1, num2, result);
+        } else {
+            printf("ERROR: Cannot divide by zero!\n");
+        }
+    }
+    else {
+        printf("Invalid operator!\n");
+    }
+    
+    system("pause");
+    return 0;
+}
+
+What to do:
+1. Create file Calculator_Final.c
+2. Copy code
+3. Compile and run
+4. Test all operations:
+   - Enter: 10, +, 5 → should print "10 + 5 = 15"
+   - Enter: 20, -, 8 → should print "20 - 8 = 12"
+   - Enter: 6, *, 7 → should print "6 * 7 = 42"
+   - Enter: 20, /, 4 → should print "20 / 4 = 5"
+   - Enter: 10, /, 0 → should print error
+   - Enter: 5, %, 2 → should print "Invalid operator!"
+
+---
+
+SUMMARY:
+Task 1: Print message
+Task 2: Read 2 numbers
+Task 3: Add them
+Task 4: Subtract them
+Task 5: Multiply them
+Task 6: Divide them
+Task 7: Create menu
+Task 8: Combine all (FINAL PROJECT)
+
+Each task takes 5-10 minutes. Do them one by one!
