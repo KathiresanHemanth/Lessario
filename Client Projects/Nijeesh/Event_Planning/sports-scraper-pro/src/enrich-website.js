@@ -1,4 +1,4 @@
-import { PlaywrightCrawler, log, Configuration } from 'crawlee';
+import axios from 'axios';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -6,17 +6,26 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-Configuration.getGlobalConfig().set('systemInfoIntervalMillis', 0);
-
 const INPUT_FILE = path.join(__dirname, '../leads_clean.json');
 const OUTPUT_FILE = path.join(__dirname, '../leads_enriched_website.json');
 
 const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const phoneRegex = /(?:\+91|0)?[6-9]\d{4}\s?\d{5}/g;
 
+async function fetchPage(url) {
+    try {
+        const response = await axios.get(url, { 
+            timeout: 10000,
+            headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' }
+        });
+        return response.data;
+    } catch (e) {
+        return '';
+    }
+}
+
 async function scrapeWebsites() {
-    log.setLevel(log.LEVELS.INFO);
-    console.log('🌐 Starting Phase 3: Company Website Scraping...');
+    console.log('🌐 Starting Phase 3: Company Website Scraping (Axios version)...');
 
     if (!fs.existsSync(INPUT_FILE)) {
         console.error(`❌ Input file not found: ${INPUT_FILE}`);
@@ -29,10 +38,9 @@ async function scrapeWebsites() {
     if (fs.existsSync(OUTPUT_FILE)) {
         const existing = JSON.parse(fs.readFileSync(OUTPUT_FILE, 'utf8'));
         existing.forEach(l => enrichedMap.set(l.linkedinUrl, l));
-        log.info(`Loaded ${existing.length} previously website-enriched leads.`);
+        console.log(`Loaded ${existing.length} previously website-enriched leads.`);
     }
 
-    // Find unique domains to crawl
     const domainsToCrawl = new Set();
     const domainToLeads = new Map();
 
@@ -50,97 +58,69 @@ async function scrapeWebsites() {
         }
     });
 
-    // Check which domains we haven't crawled yet
-    // To be efficient, we track crawled domains in a simple file or just check if leads have a websiteEnriched flag.
     const pendingDomains = Array.from(domainsToCrawl).filter(domain => {
         const linkedInUrls = domainToLeads.get(domain);
-        // If the first lead for this domain hasn't been website-enriched, we need to crawl
         return linkedInUrls.some(url => !enrichedMap.get(url).websiteEnriched);
     });
 
-    log.info(`Found ${pendingDomains.length} domains to crawl.`);
+    console.log(`Found ${pendingDomains.length} domains to crawl.`);
 
     if (pendingDomains.length === 0) {
-        log.info('✅ All company websites crawled!');
+        console.log('✅ All company websites crawled!');
         return;
     }
 
-    const requests = pendingDomains.flatMap(domain => {
-        // We'll queue the homepage and a few likely contact pages
-        const base = `http://www.${domain}`;
-        return [
-            { url: base, userData: { domain } },
-            { url: `${base}/contact`, userData: { domain } },
-            { url: `${base}/contact-us`, userData: { domain } },
-            { url: `${base}/about`, userData: { domain } },
-            { url: `${base}/about-us`, userData: { domain } }
-        ];
-    });
-
-    const domainData = new Map(); // Store found emails/phones per domain
-
-    const crawler = new PlaywrightCrawler({
-        maxConcurrency: 5,
-        maxRequestRetries: 1, // Don't retry much for invalid domains
-        requestHandlerTimeoutSecs: 30,
-        headless: true, // We don't need to see this, usually no captchas on random corporate sites
-
-        async requestHandler({ page, request }) {
-            const { domain } = request.userData;
-            try {
-                // Get all text on the page
-                const pageText = await page.evaluate(() => document.body.innerText);
-
-                const emails = [...new Set(pageText.match(emailRegex) || [])];
-                const phones = [...new Set(pageText.match(phoneRegex) || [])];
-                const cleanPhones = phones.map(p => p.replace(/\s/g, '')).filter(p => p.length >= 10);
-
-                if (!domainData.has(domain)) {
-                    domainData.set(domain, { emails: new Set(), phones: new Set() });
-                }
-
-                emails.forEach(e => domainData.get(domain).emails.add(e));
-                cleanPhones.forEach(p => domainData.get(domain).phones.add(p));
-
-                if (emails.length > 0 || cleanPhones.length > 0) {
-                    log.info(`[${domain}] Found ${emails.length} emails, ${cleanPhones.length} phones on ${request.url}`);
-                }
-            } catch (e) {
-                // Ignore errors like page not found
-            }
-        },
-        async failedRequestHandler({ request }) {
-            // log.debug(`Failed to load ${request.url}`);
-        }
-    });
-
-    log.info('Running website crawler...');
-    try {
-        await crawler.run(requests);
-    } catch (e) {
-        log.warning(`Crawler finished with internal error (common in Crawlee), continuing to save... Error: ${e.message}`);
-    }
-
-    // Apply found data to leads
-    log.info('Applying found contacts to leads...');
-    for (const domain of pendingDomains) {
-        const data = domainData.get(domain) || { emails: new Set(), phones: new Set() };
-        const linkedInUrls = domainToLeads.get(domain);
+    // Process in batches so we don't overwhelm network
+    const BATCH_SIZE = 10;
+    
+    for (let i = 0; i < pendingDomains.length; i += BATCH_SIZE) {
+        const batch = pendingDomains.slice(i, i + BATCH_SIZE);
+        console.log(`Processing batch ${i / BATCH_SIZE + 1} of ${Math.ceil(pendingDomains.length / BATCH_SIZE)}...`);
         
-        for (const url of linkedInUrls) {
-            const lead = enrichedMap.get(url);
-            lead.websiteEnriched = true;
+        await Promise.all(batch.map(async (domain) => {
+            const base = `http://www.${domain}`;
+            const urls = [base, `${base}/contact`, `${base}/contact-us`, `${base}/about`, `${base}/about-us`];
             
-            // Add found contacts to the lead
-            lead.companyEmails = Array.from(data.emails);
-            lead.companyPhones = Array.from(data.phones);
+            const foundEmails = new Set();
+            const foundPhones = new Set();
             
-            enrichedMap.set(url, lead);
-        }
+            for (const url of urls) {
+                const text = await fetchPage(url);
+                if (!text) continue;
+                
+                const emails = text.match(emailRegex) || [];
+                const phones = text.match(phoneRegex) || [];
+                
+                emails.forEach(e => foundEmails.add(e.toLowerCase()));
+                phones.forEach(p => {
+                    const clean = p.replace(/\s/g, '');
+                    if (clean.length >= 10) foundPhones.add(clean);
+                });
+            }
+            
+            const emailsArr = Array.from(foundEmails).filter(e => !e.includes('.png') && !e.includes('.jpg'));
+            const phonesArr = Array.from(foundPhones);
+            
+            if (emailsArr.length > 0 || phonesArr.length > 0) {
+                console.log(`[${domain}] Found ${emailsArr.length} emails, ${phonesArr.length} phones`);
+            }
+            
+            // Update leads
+            const linkedInUrls = domainToLeads.get(domain);
+            for (const url of linkedInUrls) {
+                const lead = enrichedMap.get(url);
+                lead.websiteEnriched = true;
+                lead.companyEmails = emailsArr;
+                lead.companyPhones = phonesArr;
+                enrichedMap.set(url, lead);
+            }
+        }));
+        
+        // Save after each batch
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(Array.from(enrichedMap.values()), null, 2));
     }
 
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(Array.from(enrichedMap.values()), null, 2));
-    log.info(`✅ Saved website-enriched leads to: ${OUTPUT_FILE}`);
+    console.log(`✅ Saved website-enriched leads to: ${OUTPUT_FILE}`);
 }
 
 scrapeWebsites();
