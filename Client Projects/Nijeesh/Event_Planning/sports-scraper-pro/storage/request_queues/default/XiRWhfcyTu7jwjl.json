@@ -1,0 +1,9 @@
+{
+	"id": "XiRWhfcyTu7jwjl",
+	"json": "{\"id\":\"XiRWhfcyTu7jwjl\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Smart+Wearables%22+OR+%22Trackers%22%29+%22India%22&num=20&start=30\",\"loadedUrl\":\"https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fin%252F%2B%2528%2522CEO%2522%2BOR%2B%2522Founder%2522%2BOR%2B%2522Co-Founder%2522%2BOR%2B%2522Director%2522%2BOR%2B%2522Managing%2BDirector%2522%2BOR%2B%2522Owner%2522%2529%2B%2528%2522Smart%2BWearables%2522%2BOR%2B%2522Trackers%2522%2529%2B%2522India%2522%26num%3D20%26start%3D30%26sei%3DGFTwae_ZD4nO1sQPkebdSA&q=EgRzYL2JGJiowc8GIjCfW9NFC7OI5NsGR_8lcBiLdEgsoel5crH3jt2aZx_eF_e4vVqDgNy2kG86S-uYbtoyAVJaAUM\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Smart+Wearables%22+OR+%22Trackers%22%29+%22India%22&start=30\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"Smart Wearables & Trackers\",\"pageNum\":4,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T06:31:14.902Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Smart+Wearables%22+OR+%22Trackers%22%29+%22India%22&start=30",
+	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Smart+Wearables%22+OR+%22Trackers%22%29+%22India%22&num=20&start=30"
+}

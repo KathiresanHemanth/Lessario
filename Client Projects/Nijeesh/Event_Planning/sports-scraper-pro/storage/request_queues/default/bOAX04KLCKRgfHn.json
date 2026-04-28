@@ -1,0 +1,9 @@
+{
+	"id": "bOAX04KLCKRgfHn",
+	"json": "{\"id\":\"bOAX04KLCKRgfHn\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F%20(%22CEO%22%20OR%20%22Founder%22%20OR%20%22Co-Founder%22%20OR%20%22Director%22%20OR%20%22Managing%20Director%22%20OR%20%22Owner%22)%20(%22Athletic%20Footwear%22%20OR%20%22Cleats%22)%20%22India%22&num=20\",\"loadedUrl\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F%20(%22CEO%22%20OR%20%22Founder%22%20OR%20%22Co-Founder%22%20OR%20%22Director%22%20OR%20%22Managing%20Director%22%20OR%20%22Owner%22)%20(%22Athletic%20Footwear%22%20OR%20%22Cleats%22)%20%22India%22&num=20\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Athletic+Footwear%22+OR+%22Cleats%22%29+%22India%22\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"Athletic Footwear & Cleats\",\"pageNum\":1,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T06:02:08.054Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Athletic+Footwear%22+OR+%22Cleats%22%29+%22India%22",
+	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F%20(%22CEO%22%20OR%20%22Founder%22%20OR%20%22Co-Founder%22%20OR%20%22Director%22%20OR%20%22Managing%20Director%22%20OR%20%22Owner%22)%20(%22Athletic%20Footwear%22%20OR%20%22Cleats%22)%20%22India%22&num=20"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "CWgjDXUMvv1Rpuw",
+	"json": "{\"id\":\"CWgjDXUMvv1Rpuw\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Licensed+Merchandise%22+OR+%22Retail%22%29+%22India%22&num=20&start=60\",\"loadedUrl\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Licensed+Merchandise%22+OR+%22Retail%22%29+%22India%22&num=20&start=60&sei=KV_waaSaLtCd1sQP0su2uAw\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Licensed+Merchandise%22+OR+%22Retail%22%29+%22India%22&start=60\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"Licensed Merchandise & Retail\",\"pageNum\":7,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T07:18:37.631Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Licensed+Merchandise%22+OR+%22Retail%22%29+%22India%22&start=60",
+	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Licensed+Merchandise%22+OR+%22Retail%22%29+%22India%22&num=20&start=60"
+}
