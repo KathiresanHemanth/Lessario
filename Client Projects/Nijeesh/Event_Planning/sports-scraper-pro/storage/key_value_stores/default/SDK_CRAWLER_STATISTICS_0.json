@@ -1,52 +1,25 @@
 {
-  "requestsFinished": 137,
+  "requestsFinished": 0,
   "requestsFailed": 0,
-  "requestsRetries": 26,
+  "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 1,
-  "requestMinDurationMillis": 24180,
-  "requestMaxDurationMillis": 335722,
+  "requestsFinishedPerMinute": 0,
+  "requestMinDurationMillis": null,
+  "requestMaxDurationMillis": 0,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 5945295,
-  "crawlerStartedAt": "2026-04-28T06:00:57.411Z",
-  "crawlerFinishedAt": "2026-04-28T07:40:42.592Z",
-  "statsPersistedAt": "2026-04-28T07:40:42.592Z",
-  "crawlerRuntimeMillis": 5985276,
-  "crawlerLastStartTimestamp": 1777356057316,
-  "requestRetryHistogram": [
-    111,
-    24,
-    1,
-    1
-  ],
+  "requestTotalFinishedDurationMillis": 0,
+  "crawlerStartedAt": "2026-04-28T08:05:54.450Z",
+  "crawlerFinishedAt": "2026-04-28T08:05:54.468Z",
+  "statsPersistedAt": "2026-04-28T08:05:54.468Z",
+  "crawlerRuntimeMillis": 504,
+  "crawlerLastStartTimestamp": 1777363553964,
+  "requestRetryHistogram": [],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 43396,
-  "requestTotalDurationMillis": 5945295,
-  "requestsTotal": 137,
-  "requestsWithStatusCode": {
-    "200": 137,
-    "429": 28
-  },
+  "requestAvgFinishedDurationMillis": null,
+  "requestTotalDurationMillis": 0,
+  "requestsTotal": 0,
+  "requestsWithStatusCode": {},
   "errors": {},
-  "retryErrors": {
-    "/Users/arstudios/Documents/GitHub/Lessario/Client Projects/Nijeesh/Event_Planning/sports-scraper-pro/node_modules/@crawlee/basic/internals/basic-crawler.js:913:19": {
-      "missing error code": {
-        "Error": {
-          "Request blocked - received 429 status code.": {
-            "count": 28
-          }
-        }
-      }
-    },
-    "/Users/arstudios/Documents/GitHub/Lessario/Client Projects/Nijeesh/Event_Planning/sports-scraper-pro/node_modules/@crawlee/playwright/internals/utils/playwright-utils.js:165:17": {
-      "missing error code": {
-        "Error": {
-          "page.goto: net::ERR_ABORTED; maybe frame was detached?": {
-            "count": 1
-          }
-        }
-      }
-    }
-  }
+  "retryErrors": {}
 }

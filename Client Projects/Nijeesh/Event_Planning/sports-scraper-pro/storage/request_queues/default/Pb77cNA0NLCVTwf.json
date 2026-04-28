@@ -1,9 +1,0 @@
-{
-	"id": "Pb77cNA0NLCVTwf",
-	"json": "{\"id\":\"Pb77cNA0NLCVTwf\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Event+Management%22%29+%22India%22&num=20&start=50\",\"loadedUrl\":\"https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fin%252F%2B%2528%2522CEO%2522%2BOR%2B%2522Founder%2522%2BOR%2B%2522Co-Founder%2522%2BOR%2B%2522Director%2522%2BOR%2B%2522Managing%2BDirector%2522%2BOR%2B%2522Owner%2522%2529%2B%2528%2522Event%2BManagement%2522%2529%2B%2522India%2522%26num%3D20%26start%3D50%26sei%3D8Vrwabw3ztHWxA_IspnZBQ&q=EgRzYL2JGPG1wc8GIjBBnQEl7EZA-sczKj9W_pDhKlv8yliiNO0uGzdyjWNayBN4bHwypmqVdkrrcv_BQVwyAVJaAUM\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Event+Management%22%29+%22India%22&start=50\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"Event Management\",\"pageNum\":6,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T07:05:35.427Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Event+Management%22%29+%22India%22&start=50",
-	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Event+Management%22%29+%22India%22&num=20&start=50"
-}

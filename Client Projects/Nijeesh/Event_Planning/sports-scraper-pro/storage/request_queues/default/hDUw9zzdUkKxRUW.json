@@ -1,0 +1,9 @@
+{
+	"id": "hDUw9zzdUkKxRUW",
+	"json": "{\"id\":\"hDUw9zzdUkKxRUW\",\"url\":\"http://www.camcom.com\",\"uniqueKey\":\"http://www.camcom.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"camcom.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554416,
+	"retryCount": 0,
+	"uniqueKey": "http://www.camcom.com",
+	"url": "http://www.camcom.com"
+}

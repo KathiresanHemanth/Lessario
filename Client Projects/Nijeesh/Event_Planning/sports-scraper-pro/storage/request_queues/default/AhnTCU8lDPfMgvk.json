@@ -1,9 +1,0 @@
-{
-	"id": "AhnTCU8lDPfMgvk",
-	"json": "{\"id\":\"AhnTCU8lDPfMgvk\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22AR%22+OR+%22VR%22%29+%22India%22&num=20&start=90\",\"loadedUrl\":\"https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fin%252F%2B%2528%2522CEO%2522%2BOR%2B%2522Founder%2522%2BOR%2B%2522Co-Founder%2522%2BOR%2B%2522Director%2522%2BOR%2B%2522Managing%2BDirector%2522%2BOR%2B%2522Owner%2522%2529%2B%2528%2522AR%2522%2BOR%2B%2522VR%2522%2529%2B%2522India%2522%26num%3D20%26start%3D90%26sei%3DG2TwaaaeIJrd5OUP_c_b8A4&q=EgRzYL2JGJ3Iwc8GIjD01x0VO39BumrIWfmtaiGRl3NbYhbI4T3myBAyR2hU67DK4HSv9ot6kuJ8DBjAd0kyAVJaAUM\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22AR%22+OR+%22VR%22%29+%22India%22&start=90\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"AR/VR\",\"pageNum\":10,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T07:39:39.974Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22AR%22+OR+%22VR%22%29+%22India%22&start=90",
-	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22AR%22+OR+%22VR%22%29+%22India%22&num=20&start=90"
-}

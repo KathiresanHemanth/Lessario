@@ -1,0 +1,9 @@
+{
+	"id": "UquzFYJvIKuphaP",
+	"json": "{\"id\":\"UquzFYJvIKuphaP\",\"url\":\"http://www.information.com\",\"uniqueKey\":\"http://www.information.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"information.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554404,
+	"retryCount": 0,
+	"uniqueKey": "http://www.information.com",
+	"url": "http://www.information.com"
+}

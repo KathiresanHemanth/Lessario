@@ -1,9 +1,0 @@
-{
-	"id": "bw8w88Hq22ppjX4",
-	"json": "{\"id\":\"bw8w88Hq22ppjX4\",\"url\":\"https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Sports+Medicine%22+OR+%22Physiotherapy%22%29+%22India%22&num=20&start=50\",\"loadedUrl\":\"https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsite%253Alinkedin.com%252Fin%252F%2B%2528%2522CEO%2522%2BOR%2B%2522Founder%2522%2BOR%2B%2522Co-Founder%2522%2BOR%2B%2522Director%2522%2BOR%2B%2522Managing%2BDirector%2522%2BOR%2B%2522Owner%2522%2529%2B%2528%2522Sports%2BMedicine%2522%2BOR%2B%2522Physiotherapy%2522%2529%2B%2522India%2522%26num%3D20%26start%3D50%26sei%3DP1zwabuONcrO1sQP-7fJ0Qw&q=EgRzYL2JGMG4wc8GIjBTuJ8tjg-LCuqUyZQuk9X4nj5cIO8qkXmAUCfSlGNgtesA_okBRjrv8yyxD-7-A2AyAVJaAUM\",\"uniqueKey\":\"https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Sports+Medicine%22+OR+%22Physiotherapy%22%29+%22India%22&start=50\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"category\":\"Sports Medicine & Physiotherapy\",\"pageNum\":6,\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-04-28T07:08:56.555Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.google.com/search?num=20&q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Sports+Medicine%22+OR+%22Physiotherapy%22%29+%22India%22&start=50",
-	"url": "https://www.google.com/search?q=site%3Alinkedin.com%2Fin%2F+%28%22CEO%22+OR+%22Founder%22+OR+%22Co-Founder%22+OR+%22Director%22+OR+%22Managing+Director%22+OR+%22Owner%22%29+%28%22Sports+Medicine%22+OR+%22Physiotherapy%22%29+%22India%22&num=20&start=50"
-}

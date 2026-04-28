@@ -1,0 +1,9 @@
+{
+	"id": "3Bx6EKUgsmiKkx6",
+	"json": "{\"id\":\"3Bx6EKUgsmiKkx6\",\"url\":\"http://www.spencers.com/about\",\"uniqueKey\":\"http://www.spencers.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"spencers.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554091,
+	"retryCount": 0,
+	"uniqueKey": "http://www.spencers.com/about",
+	"url": "http://www.spencers.com/about"
+}

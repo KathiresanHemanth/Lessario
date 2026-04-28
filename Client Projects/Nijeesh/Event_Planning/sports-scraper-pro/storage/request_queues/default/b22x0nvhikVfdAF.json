@@ -1,0 +1,9 @@
+{
+	"id": "b22x0nvhikVfdAF",
+	"json": "{\"id\":\"b22x0nvhikVfdAF\",\"url\":\"http://www.fitnation.com/about\",\"uniqueKey\":\"http://www.fitnation.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"fitnation.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554412,
+	"retryCount": 0,
+	"uniqueKey": "http://www.fitnation.com/about",
+	"url": "http://www.fitnation.com/about"
+}

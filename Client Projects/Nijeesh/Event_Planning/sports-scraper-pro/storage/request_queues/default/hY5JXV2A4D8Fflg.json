@@ -1,0 +1,9 @@
+{
+	"id": "hY5JXV2A4D8Fflg",
+	"json": "{\"id\":\"hY5JXV2A4D8Fflg\",\"url\":\"http://www.kpr.com/about-us\",\"uniqueKey\":\"http://www.kpr.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"kpr.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554345,
+	"retryCount": 0,
+	"uniqueKey": "http://www.kpr.com/about-us",
+	"url": "http://www.kpr.com/about-us"
+}

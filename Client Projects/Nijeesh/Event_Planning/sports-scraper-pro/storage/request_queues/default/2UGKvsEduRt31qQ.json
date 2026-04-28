@@ -1,0 +1,9 @@
+{
+	"id": "2UGKvsEduRt31qQ",
+	"json": "{\"id\":\"2UGKvsEduRt31qQ\",\"url\":\"http://www.eventplanet.com/about-us\",\"uniqueKey\":\"http://www.eventplanet.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"eventplanet.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554121,
+	"retryCount": 0,
+	"uniqueKey": "http://www.eventplanet.com/about-us",
+	"url": "http://www.eventplanet.com/about-us"
+}

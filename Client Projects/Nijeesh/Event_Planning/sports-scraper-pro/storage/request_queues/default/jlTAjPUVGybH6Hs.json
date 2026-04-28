@@ -1,0 +1,9 @@
+{
+	"id": "jlTAjPUVGybH6Hs",
+	"json": "{\"id\":\"jlTAjPUVGybH6Hs\",\"url\":\"http://www.coppercloud.com/about\",\"uniqueKey\":\"http://www.coppercloud.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"coppercloud.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554263,
+	"retryCount": 0,
+	"uniqueKey": "http://www.coppercloud.com/about",
+	"url": "http://www.coppercloud.com/about"
+}

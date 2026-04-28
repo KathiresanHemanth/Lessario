@@ -1,0 +1,9 @@
+{
+	"id": "Ab1hRqDcvFhHBjo",
+	"json": "{\"id\":\"Ab1hRqDcvFhHBjo\",\"url\":\"http://www.capgeminiinvent.com/about\",\"uniqueKey\":\"http://www.capgeminiinvent.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"capgeminiinvent.com\"}}",
+	"method": "GET",
+	"orderNo": 1777363554499,
+	"retryCount": 0,
+	"uniqueKey": "http://www.capgeminiinvent.com/about",
+	"url": "http://www.capgeminiinvent.com/about"
+}
