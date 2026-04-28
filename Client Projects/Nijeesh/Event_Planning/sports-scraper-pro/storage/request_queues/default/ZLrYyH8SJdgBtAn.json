@@ -1,9 +1,0 @@
-{
-	"id": "ZLrYyH8SJdgBtAn",
-	"json": "{\"id\":\"ZLrYyH8SJdgBtAn\",\"url\":\"http://www.yotta.com/about\",\"uniqueKey\":\"http://www.yotta.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"yotta.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554096,
-	"retryCount": 0,
-	"uniqueKey": "http://www.yotta.com/about",
-	"url": "http://www.yotta.com/about"
-}

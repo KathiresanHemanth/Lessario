@@ -1,9 +1,0 @@
-{
-	"id": "T7hPzFSfMqN5Ftj",
-	"json": "{\"id\":\"T7hPzFSfMqN5Ftj\",\"url\":\"http://www.thedwarven.com/about-us\",\"uniqueKey\":\"http://www.thedwarven.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"thedwarven.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554429,
-	"retryCount": 0,
-	"uniqueKey": "http://www.thedwarven.com/about-us",
-	"url": "http://www.thedwarven.com/about-us"
-}

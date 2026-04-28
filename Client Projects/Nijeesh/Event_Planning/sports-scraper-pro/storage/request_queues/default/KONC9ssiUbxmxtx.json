@@ -1,9 +1,0 @@
-{
-	"id": "KONC9ssiUbxmxtx",
-	"json": "{\"id\":\"KONC9ssiUbxmxtx\",\"url\":\"http://www.siriusai.com/about-us\",\"uniqueKey\":\"http://www.siriusai.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"siriusai.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554098,
-	"retryCount": 0,
-	"uniqueKey": "http://www.siriusai.com/about-us",
-	"url": "http://www.siriusai.com/about-us"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "LF2mvvsrexkf8al",
-	"json": "{\"id\":\"LF2mvvsrexkf8al\",\"url\":\"http://www.stackiot.com/about\",\"uniqueKey\":\"http://www.stackiot.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"stackiot.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554377,
-	"retryCount": 0,
-	"uniqueKey": "http://www.stackiot.com/about",
-	"url": "http://www.stackiot.com/about"
-}

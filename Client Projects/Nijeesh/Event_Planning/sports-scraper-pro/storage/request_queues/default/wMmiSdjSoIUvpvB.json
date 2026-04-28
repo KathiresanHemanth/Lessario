@@ -1,9 +1,0 @@
-{
-	"id": "wMmiSdjSoIUvpvB",
-	"json": "{\"id\":\"wMmiSdjSoIUvpvB\",\"url\":\"http://www.akva.com/about-us\",\"uniqueKey\":\"http://www.akva.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"akva.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554313,
-	"retryCount": 0,
-	"uniqueKey": "http://www.akva.com/about-us",
-	"url": "http://www.akva.com/about-us"
-}

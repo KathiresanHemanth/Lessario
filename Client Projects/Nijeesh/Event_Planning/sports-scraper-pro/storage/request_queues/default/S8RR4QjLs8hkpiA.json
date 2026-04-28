@@ -1,9 +1,0 @@
-{
-	"id": "S8RR4QjLs8hkpiA",
-	"json": "{\"id\":\"S8RR4QjLs8hkpiA\",\"url\":\"http://www.seagull.com/about\",\"uniqueKey\":\"http://www.seagull.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"seagull.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554206,
-	"retryCount": 0,
-	"uniqueKey": "http://www.seagull.com/about",
-	"url": "http://www.seagull.com/about"
-}

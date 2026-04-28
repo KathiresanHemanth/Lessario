@@ -1,9 +1,0 @@
-{
-	"id": "xTrVlBXHi8O3NPp",
-	"json": "{\"id\":\"xTrVlBXHi8O3NPp\",\"url\":\"http://www.camcom.com/about-us\",\"uniqueKey\":\"http://www.camcom.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"camcom.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554418,
-	"retryCount": 0,
-	"uniqueKey": "http://www.camcom.com/about-us",
-	"url": "http://www.camcom.com/about-us"
-}

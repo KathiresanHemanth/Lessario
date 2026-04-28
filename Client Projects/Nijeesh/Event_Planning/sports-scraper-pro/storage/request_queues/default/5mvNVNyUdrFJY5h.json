@@ -1,9 +1,0 @@
-{
-	"id": "5mvNVNyUdrFJY5h",
-	"json": "{\"id\":\"5mvNVNyUdrFJY5h\",\"url\":\"http://www.flipkart.com/about-us\",\"uniqueKey\":\"http://www.flipkart.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"flipkart.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554381,
-	"retryCount": 0,
-	"uniqueKey": "http://www.flipkart.com/about-us",
-	"url": "http://www.flipkart.com/about-us"
-}

@@ -1,9 +1,0 @@
-{
-	"id": "gNBdmwLUU7YJseA",
-	"json": "{\"id\":\"gNBdmwLUU7YJseA\",\"url\":\"http://www.cosmas.com/about\",\"uniqueKey\":\"http://www.cosmas.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"cosmas.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554523,
-	"retryCount": 0,
-	"uniqueKey": "http://www.cosmas.com/about",
-	"url": "http://www.cosmas.com/about"
-}

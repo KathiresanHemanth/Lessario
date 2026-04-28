@@ -1,9 +1,0 @@
-{
-	"id": "JZU82CojfOlhm52",
-	"json": "{\"id\":\"JZU82CojfOlhm52\",\"url\":\"http://www.alltech.com/about-us\",\"uniqueKey\":\"http://www.alltech.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"alltech.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554424,
-	"retryCount": 0,
-	"uniqueKey": "http://www.alltech.com/about-us",
-	"url": "http://www.alltech.com/about-us"
-}

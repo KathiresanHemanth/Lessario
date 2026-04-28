@@ -1,9 +1,0 @@
-{
-	"id": "8bVoMa79W3V4k5i",
-	"json": "{\"id\":\"8bVoMa79W3V4k5i\",\"url\":\"http://www.stage.com/about-us\",\"uniqueKey\":\"http://www.stage.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"stage.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554196,
-	"retryCount": 0,
-	"uniqueKey": "http://www.stage.com/about-us",
-	"url": "http://www.stage.com/about-us"
-}

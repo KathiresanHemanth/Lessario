@@ -1,9 +1,0 @@
-{
-	"id": "HqOsYax64oKEnWO",
-	"json": "{\"id\":\"HqOsYax64oKEnWO\",\"url\":\"http://www.myntra.com\",\"uniqueKey\":\"http://www.myntra.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"myntra.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554363,
-	"retryCount": 0,
-	"uniqueKey": "http://www.myntra.com",
-	"url": "http://www.myntra.com"
-}

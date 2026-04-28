@@ -1,9 +1,0 @@
-{
-	"id": "tv3GEsI1Np8pIP2",
-	"json": "{\"id\":\"tv3GEsI1Np8pIP2\",\"url\":\"http://www.ab.com/about\",\"uniqueKey\":\"http://www.ab.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"ab.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554226,
-	"retryCount": 0,
-	"uniqueKey": "http://www.ab.com/about",
-	"url": "http://www.ab.com/about"
-}

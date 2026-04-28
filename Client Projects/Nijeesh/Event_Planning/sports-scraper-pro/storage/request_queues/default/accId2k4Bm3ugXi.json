@@ -1,9 +1,0 @@
-{
-	"id": "accId2k4Bm3ugXi",
-	"json": "{\"id\":\"accId2k4Bm3ugXi\",\"url\":\"http://www.phedel.com/about\",\"uniqueKey\":\"http://www.phedel.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"phedel.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554554,
-	"retryCount": 0,
-	"uniqueKey": "http://www.phedel.com/about",
-	"url": "http://www.phedel.com/about"
-}

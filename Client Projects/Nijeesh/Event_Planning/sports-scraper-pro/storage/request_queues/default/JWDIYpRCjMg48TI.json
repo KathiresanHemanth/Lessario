@@ -1,9 +1,0 @@
-{
-	"id": "JWDIYpRCjMg48TI",
-	"json": "{\"id\":\"JWDIYpRCjMg48TI\",\"url\":\"http://www.ab.com\",\"uniqueKey\":\"http://www.ab.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"ab.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554225,
-	"retryCount": 0,
-	"uniqueKey": "http://www.ab.com",
-	"url": "http://www.ab.com"
-}

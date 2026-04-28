@@ -1,9 +1,0 @@
-{
-	"id": "CuKBcpZmilRJlCZ",
-	"json": "{\"id\":\"CuKBcpZmilRJlCZ\",\"url\":\"http://www.zilo.com/about\",\"uniqueKey\":\"http://www.zilo.com/about\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"zilo.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554182,
-	"retryCount": 0,
-	"uniqueKey": "http://www.zilo.com/about",
-	"url": "http://www.zilo.com/about"
-}

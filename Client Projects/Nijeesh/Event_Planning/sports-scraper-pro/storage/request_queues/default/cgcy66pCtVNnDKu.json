@@ -1,9 +1,0 @@
-{
-	"id": "cgcy66pCtVNnDKu",
-	"json": "{\"id\":\"cgcy66pCtVNnDKu\",\"url\":\"http://www.rocket.com\",\"uniqueKey\":\"http://www.rocket.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"rocket.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554176,
-	"retryCount": 0,
-	"uniqueKey": "http://www.rocket.com",
-	"url": "http://www.rocket.com"
-}

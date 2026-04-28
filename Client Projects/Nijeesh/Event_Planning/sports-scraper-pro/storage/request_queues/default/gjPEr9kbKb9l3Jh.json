@@ -1,9 +1,0 @@
-{
-	"id": "gjPEr9kbKb9l3Jh",
-	"json": "{\"id\":\"gjPEr9kbKb9l3Jh\",\"url\":\"http://www.information.com/about-us\",\"uniqueKey\":\"http://www.information.com/about-us\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"information.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554406,
-	"retryCount": 0,
-	"uniqueKey": "http://www.information.com/about-us",
-	"url": "http://www.information.com/about-us"
-}

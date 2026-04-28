@@ -1,9 +1,0 @@
-{
-	"id": "1GvexGECfQEgZYL",
-	"json": "{\"id\":\"1GvexGECfQEgZYL\",\"url\":\"http://www.active.com\",\"uniqueKey\":\"http://www.active.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"domain\":\"active.com\"}}",
-	"method": "GET",
-	"orderNo": 1777363554216,
-	"retryCount": 0,
-	"uniqueKey": "http://www.active.com",
-	"url": "http://www.active.com"
-}
