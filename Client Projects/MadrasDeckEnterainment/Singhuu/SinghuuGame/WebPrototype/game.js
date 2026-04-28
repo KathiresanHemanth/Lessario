@@ -180,7 +180,7 @@ let gameSpeed = baseSpeed;
 let bulletTimeScale = 1.0;
 let nextQuestionDist = QUESTION_DIST_INTERVAL;
 let activeChar = 'singu';
-let party = ['singu', 'thanthiraa', 'meenukutti', 'kongini', 'muttagose', 'suttapazham'];
+let party = ['singu'];
 let swapCooldownEnd = 0;
 
 let playerLane = 1;
@@ -715,7 +715,7 @@ function handleAnswer(answer, btnEl) {
 
 function activatePower(type, wasCorrect) {
     // 💥 SUPER SINGUU TRANSFORMATION 💥
-    if (wasCorrect && activeChar === 'singu' && type === 'meat') {
+    if (wasCorrect && activeChar === 'singu') {
         isSuperForm = true;
         // Apply the special 2D Front Face texture
         const frontMat = new THREE.MeshBasicMaterial({ map: superSinghuuTex, transparent: true });
@@ -773,15 +773,7 @@ function updateLivesUI() {
     for (let i = 0; i < lives; i++) hudLives.innerHTML += '❤️';
 }
 
-function swapCharacter(charKey) {
-    if (charKey === activeChar || !party.includes(charKey) || Date.now() < swapCooldownEnd) return;
-    activeChar = charKey; swapCooldownEnd = Date.now() + SWAP_COOLDOWN;
-    buildPlayerMesh(charKey);
-    playerGroup.position.set(LANES[playerLane], PLAYER_GROUND_Y + playerVelY * 10, 0);
-    document.querySelectorAll('.swap-btn').forEach(b => b.classList.toggle('active-char', b.dataset.char === charKey));
-    sfxSwap(); spawnParticle(playerGroup.position.clone(), CHARACTERS[charKey].color, 12);
-}
-
+// Character swapping removed as per new focus.
 // ─── Input ───
 function movePlayerLane(dir) {
     if (gameState !== 'PLAYING' && gameState !== 'BULLET_TIME') return;
@@ -806,7 +798,6 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'd') movePlayerLane(1);
     if (e.key === 'ArrowUp' || e.key === 'w' || e.key === ' ') jumpPlayer();
     if (e.key === 'ArrowDown' || e.key === 's') slidePlayer();
-    if (['1', '2', '3'].includes(e.key)) swapCharacter(party[parseInt(e.key) - 1]);
 });
 let tsX = 0, tsY = 0;
 container.addEventListener('touchstart', e => { tsX = e.touches[0].clientX; tsY = e.touches[0].clientY; }, { passive: true });
@@ -818,8 +809,12 @@ container.addEventListener('touchend', e => {
 }, { passive: true });
 document.getElementById('jump-btn').addEventListener('click', jumpPlayer);
 document.getElementById('slide-btn').addEventListener('click', slidePlayer);
-document.querySelectorAll('.swap-btn').forEach(b => b.addEventListener('click', () => swapCharacter(b.dataset.char)));
 document.getElementById('play-btn').addEventListener('click', startGame);
+if (document.getElementById('exit-btn')) {
+    document.getElementById('exit-btn').addEventListener('click', () => { 
+        alert("Thanks for playing Nama Thala Singhuu! You can close this window now."); 
+    });
+}
 document.getElementById('retry-btn').addEventListener('click', startGame);
 document.getElementById('pause-btn').addEventListener('click', togglePause);
 document.getElementById('resume-btn').addEventListener('click', togglePause);
@@ -827,6 +822,79 @@ document.getElementById('quit-btn').addEventListener('click', () => { pauseOverl
 document.getElementById('menu-btn').addEventListener('click', () => { gameoverOverlay.classList.add('hidden'); introOverlay.classList.remove('hidden'); });
 document.getElementById('revive-btn').addEventListener('click', revivePlayer);
 document.getElementById('revive-skip-btn').addEventListener('click', () => { clearTimeout(reviveTimerHandle); reviveOverlay.classList.add('hidden'); endGame(); });
+
+// ─── Leaderboard UI Logic ───
+if (document.getElementById('leaderboard-btn')) {
+    const lbBtn = document.getElementById('leaderboard-btn');
+    const lbOverlay = document.getElementById('leaderboard-overlay');
+    const lbClose = document.getElementById('close-leaderboard-btn');
+    const tabScores = document.getElementById('tab-highscores');
+    const tabHistory = document.getElementById('tab-history');
+    
+    lbBtn.addEventListener('click', () => {
+        lbOverlay.classList.remove('hidden');
+        updateLeaderboardUI('scores');
+    });
+
+    if (document.getElementById('go-leaderboard-btn')) {
+        document.getElementById('go-leaderboard-btn').addEventListener('click', () => {
+            lbOverlay.classList.remove('hidden');
+            updateLeaderboardUI('scores');
+        });
+    }
+    
+    lbClose.addEventListener('click', () => {
+        lbOverlay.classList.add('hidden');
+    });
+    
+    tabScores.addEventListener('click', () => {
+        tabScores.classList.add('active-tab');
+        tabHistory.classList.remove('active-tab');
+        updateLeaderboardUI('scores');
+    });
+    
+    tabHistory.addEventListener('click', () => {
+        tabHistory.classList.add('active-tab');
+        tabScores.classList.remove('active-tab');
+        updateLeaderboardUI('history');
+    });
+}
+
+function updateLeaderboardUI(mode) {
+    const listEl = document.getElementById('leaderboard-content');
+    listEl.innerHTML = '';
+    
+    let gameHistory = JSON.parse(localStorage.getItem('singhuu_history') || '[]');
+    
+    let displayList = [];
+    if (mode === 'scores') {
+        displayList = [...gameHistory].sort((a, b) => b.distance - a.distance).slice(0, 50);
+    } else {
+        displayList = [...gameHistory].sort((a, b) => b.timestamp - a.timestamp).slice(0, 50);
+    }
+    
+    if (displayList.length === 0) {
+        listEl.innerHTML = '<p style="text-align:center; color:rgba(255,255,255,0.5); padding: 20px;">No runs recorded yet. Start playing!</p>';
+        return;
+    }
+    
+    displayList.forEach((run, idx) => {
+        const item = document.createElement('div');
+        item.className = 'history-item';
+        let rankStr = mode === 'scores' ? `#${idx + 1} ` : '';
+        item.innerHTML = `
+            <div class="history-item-top">
+                <span>${rankStr}${run.date || 'Unknown Date'}</span>
+                <span>🧠 ${run.correct}</span>
+            </div>
+            <div class="history-item-stats">
+                <span style="color:var(--singu-gold)">📏 ${run.distance}m</span>
+                <span style="color:#64B5F6">🪙 ${run.coins}</span>
+            </div>
+        `;
+        listEl.appendChild(item);
+    });
+}
 
 function togglePause() {
     if (gameState === 'PLAYING') {
@@ -933,12 +1001,26 @@ function revivePlayer() {
 function endGame() {
     gameState = 'GAMEOVER'; hud.classList.add('hidden');
 
-    // Update best distance
-    const isNewBest = Math.floor(distance) > bestDistance;
+    const finalDistance = Math.floor(distance);
+    const isNewBest = finalDistance > bestDistance;
     if (isNewBest) {
-        bestDistance = Math.floor(distance);
+        bestDistance = finalDistance;
         localStorage.setItem('singhuu_best', bestDistance.toString());
     }
+
+    // Save History
+    let gameHistory = JSON.parse(localStorage.getItem('singhuu_history') || '[]');
+    gameHistory.push({
+        date: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+        distance: finalDistance,
+        coins: coins,
+        correct: `${questionsCorrect}/${questionsAsked}`,
+        timestamp: Date.now()
+    });
+    // Keep top 100 runs
+    gameHistory.sort((a, b) => b.distance - a.distance);
+    if(gameHistory.length > 100) gameHistory = gameHistory.slice(0, 100);
+    localStorage.setItem('singhuu_history', JSON.stringify(gameHistory));
 
     document.getElementById('go-distance').textContent = Math.floor(distance) + 'm';
     document.getElementById('go-coins').textContent = coins;
