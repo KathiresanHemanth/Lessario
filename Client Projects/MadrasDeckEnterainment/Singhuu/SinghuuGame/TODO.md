@@ -62,4 +62,8 @@
 ---
 
 ### Current Focus:
-**Expanding Milestone 3 limits.** The user requested that we push Three.js to its absolute highest capacity. We are unlocking Unreal Engine style bloom, advanced post-processing, and preparing the `game.js` character dictionary to support ALL 9+ characters from the `character_breakdowns_and_summaries.md` story document (Kongini the Gorilla, Muttagose the Hare, Suttapazham the Camel, etc.).
+**Streamlined Singhuu Experience:** 
+- Simplify the main menu to only feature **Start** and **Exit** buttons. 
+- Remove the character swap system and focus entirely on a single playable character: **Singhuu**. 
+- Implement a transformation mechanic where Singhuu transforms into **Super Singhuu** after answering a question correctly.
+- **Asset Integration:** Integrated 3D rigged models for `NormalSinghu.glb` and `SuperSinghu.glb`. Will generate animations via Mixamo next if required.

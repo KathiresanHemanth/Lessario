@@ -3,5 +3,7 @@
 .idea
 dist
 node_modules
-storage
 .env
+storage/
+*.log
+.DS_Store
