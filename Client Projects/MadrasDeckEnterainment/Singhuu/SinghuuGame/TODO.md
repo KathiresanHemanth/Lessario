@@ -66,4 +66,4 @@
 - Simplify the main menu to only feature **Start** and **Exit** buttons. 
 - Remove the character swap system and focus entirely on a single playable character: **Singhuu**. 
 - Implement a transformation mechanic where Singhuu transforms into **Super Singhuu** after answering a question correctly.
-- **Pending Asset Integration:** Awaiting rigged 3D models for Singhuu and Super Singhuu from the user. Will generate animations via Mixamo if needed.
+- **Asset Integration:** Integrated 3D rigged models for `NormalSinghu.glb` and `SuperSinghu.glb`. Will generate animations via Mixamo next if required.

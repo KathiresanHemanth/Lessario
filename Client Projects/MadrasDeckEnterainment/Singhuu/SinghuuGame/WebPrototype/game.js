@@ -382,29 +382,22 @@ function prepareModel(gltf, charKey, scale) {
     const model = gltf.scene;
     // Auto-center or adjust scale
     model.scale.set(scale, scale, scale);
-    if (charKey === 'singu') {
-        model.rotation.y = Math.PI / 2; // Horse is turned sideways in three.js example
-    }
+    model.rotation.y = Math.PI; // Face away from the camera
     model.traverse((child) => {
         if (child.isMesh) { child.castShadow = true; child.receiveShadow = true; }
     });
     externalModels[charKey] = { scene: model, animations: gltf.animations };
 }
 
-// Singu -> Horse
-gltfLoader.load('assets/models/Horse.glb', (gltf) => {
-    prepareModel(gltf, 'singu', 0.006);
-    console.log("🦁 Loaded Singu 3D Model");
+// Singu Normal
+gltfLoader.load('assets/models/NormalSinghu.glb', (gltf) => {
+    prepareModel(gltf, 'singu', 1.0); // Adjust scale if needed based on the model size
+    console.log("🦁 Loaded Normal Singu 3D Model");
 });
-// Thanthiraa -> Flamingo
-gltfLoader.load('assets/models/Flamingo.glb', (gltf) => {
-    prepareModel(gltf, 'thanthiraa', 0.015);
-    console.log("🦊 Loaded Thanthiraa 3D Model");
-});
-// Meenukutti -> Parrot
-gltfLoader.load('assets/models/Parrot.glb', (gltf) => {
-    prepareModel(gltf, 'meenukutti', 0.015);
-    console.log("🐦 Loaded Meenukutti 3D Model");
+// Singu Super
+gltfLoader.load('assets/models/SuperSinghu.glb', (gltf) => {
+    prepareModel(gltf, 'super_singu', 1.0); // Adjust scale if needed
+    console.log("🔥 Loaded Super Singu 3D Model");
 });
 
 function buildPlayerMesh(charKey) {
@@ -415,6 +408,12 @@ function buildPlayerMesh(charKey) {
     if (externalModels[charKey]) {
         // Use the downloaded 3D Model!
         const model = externalModels[charKey].scene;
+        
+        // Auto-align feet to ground by shifting model up by its lowest point
+        model.position.set(0, 0, 0);
+        const box = new THREE.Box3().setFromObject(model);
+        model.position.y = -box.min.y;
+        
         playerGroup.add(model);
 
         // Setup Animation
@@ -717,16 +716,7 @@ function activatePower(type, wasCorrect) {
     // 💥 SUPER SINGUU TRANSFORMATION 💥
     if (wasCorrect && activeChar === 'singu') {
         isSuperForm = true;
-        // Apply the special 2D Front Face texture
-        const frontMat = new THREE.MeshBasicMaterial({ map: superSinghuuTex, transparent: true });
-        const newMats = [...baseBodyMaterials];
-        newMats[4] = frontMat; // Z-Positive is front face in Three.js Box
-        playerBody.material = newMats;
-
-        // Scale him up
-        playerGroup.scale.set(1.4, 1.4, 1.4);
-        playerHead.visible = false; // Hide primitive head to favor texture
-        if (playerMane) playerMane.visible = false;
+        buildPlayerMesh('super_singu');
 
         sfxSuper();
         hudPower.textContent = '🔥 SUPER SINGHUU ACTIVE! 🔥';
@@ -999,10 +989,61 @@ function revivePlayer() {
 }
 
 function endGame() {
-    gameState = 'GAMEOVER'; hud.classList.add('hidden');
+    hud.classList.add('hidden');
 
     const finalDistance = Math.floor(distance);
-    const isNewBest = finalDistance > bestDistance;
+    const isNewBest = finalDistance > bestDistance && finalDistance > 0;
+
+    if (isNewBest && !window.isCelebrating) {
+        window.isCelebrating = true;
+        gameState = 'CELEBRATION';
+        
+        // Give him a golden aura and scale him up
+        createAura(0xFFD700);
+        playerGroup.scale.set(1.5, 1.5, 1.5);
+        
+        // Add "NEW RECORD" floating text (using particles or just DOM)
+        const newBestEl = document.getElementById('go-new-best');
+        newBestEl.classList.remove('hidden');
+        newBestEl.style.position = 'absolute';
+        newBestEl.style.top = '30%';
+        newBestEl.style.left = '50%';
+        newBestEl.style.transform = 'translate(-50%, -50%)';
+        newBestEl.style.zIndex = '50';
+        document.body.appendChild(newBestEl); // Move to body to show during celebration
+        
+        let jumps = 0;
+        let jumpInterval = setInterval(() => {
+            playerVelY = JUMP_FORCE * 1.5;
+            isJumping = true;
+            isGrounded = false;
+            jumps++;
+            sfxJump();
+            spawnParticle(playerGroup.position.clone(), 0xFFD700, 30);
+            
+            if (jumps >= 3) {
+                clearInterval(jumpInterval);
+                setTimeout(() => {
+                    window.isCelebrating = false;
+                    playerGroup.rotation.y = 0;
+                    // Move newBestEl back to gameover-box
+                    newBestEl.style.position = '';
+                    newBestEl.style.top = '';
+                    newBestEl.style.left = '';
+                    newBestEl.style.transform = '';
+                    document.querySelector('.gameover-box').insertBefore(newBestEl, document.querySelector('.recap-grid'));
+                    showGameOverScreen(finalDistance, isNewBest);
+                }, 1000);
+            }
+        }, 600);
+        return;
+    }
+
+    showGameOverScreen(finalDistance, isNewBest);
+}
+
+function showGameOverScreen(finalDistance, isNewBest) {
+    gameState = 'GAMEOVER';
     if (isNewBest) {
         bestDistance = finalDistance;
         localStorage.setItem('singhuu_best', bestDistance.toString());
@@ -1022,7 +1063,7 @@ function endGame() {
     if(gameHistory.length > 100) gameHistory = gameHistory.slice(0, 100);
     localStorage.setItem('singhuu_history', JSON.stringify(gameHistory));
 
-    document.getElementById('go-distance').textContent = Math.floor(distance) + 'm';
+    document.getElementById('go-distance').textContent = finalDistance + 'm';
     document.getElementById('go-coins').textContent = coins;
     document.getElementById('go-correct').textContent = `${questionsCorrect}/${questionsAsked}`;
     document.getElementById('go-best').textContent = bestDistance + 'm';
@@ -1043,6 +1084,36 @@ function endGame() {
 // ─── Main Update Loop ───
 function update() {
     if (gameState === 'PAUSED' || gameState === 'MENU' || gameState === 'GAMEOVER' || gameState === 'REVIVE_PROMPT') return;
+
+    if (gameState === 'CELEBRATION') {
+        // Celebration logic
+        if (isJumping) {
+            playerVelY -= GRAVITY;
+            playerGroup.position.y += playerVelY;
+            if (playerGroup.position.y <= PLAYER_GROUND_Y) {
+                playerGroup.position.y = PLAYER_GROUND_Y;
+                playerVelY = 0; isJumping = false; isGrounded = true;
+                spawnParticle(playerGroup.position.clone(), 0xFFD700, 15);
+            }
+        }
+        playerGroup.rotation.y += 0.15;
+        
+        // Update particles
+        for (let i = particles.length - 1; i >= 0; i--) {
+            const p = particles[i];
+            p.mesh.position.add(p.vel); p.vel.y -= 0.005; p.life--;
+            p.mesh.material.opacity = p.life / 50;
+            p.mesh.rotation.x += p.rotSpeed;
+            p.mesh.rotation.z += p.rotSpeed;
+            const s = 1.0 + (1 - p.life / 50) * 0.5;
+            p.mesh.scale.set(s, s, s);
+            if (p.life <= 0) { scene.remove(p.mesh); particles.splice(i, 1); }
+        }
+        
+        // Camera looks at player
+        camera.lookAt(playerGroup.position);
+        return;
+    }
 
     if (gameState === 'BULLET_TIME') {
         bulletTimeScale = Math.max(0.001, bulletTimeScale - 0.05); // Essentially paused
@@ -1122,10 +1193,7 @@ function update() {
                 // Revert Super Singhuu
                 if (isSuperForm) {
                     isSuperForm = false;
-                    playerGroup.scale.set(1.0, 1.0, 1.0);
-                    playerHead.visible = true;
-                    if (playerMane) playerMane.visible = true;
-                    playerBody.material = baseBodyMaterials;
+                    buildPlayerMesh('singu');
                     spawnParticle(playerGroup.position.clone(), 0xFFFFFF, 10);
                 }
             }
